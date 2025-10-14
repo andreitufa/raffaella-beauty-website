@@ -6,7 +6,6 @@
   "routes": [
     { "handle": "filesystem" },
     { "src": "/.*", "dest": "/index.html" }
-  ],
-  "comment": "Updated to force rebuild and fix browser tab title"
+  ]
 }
 
