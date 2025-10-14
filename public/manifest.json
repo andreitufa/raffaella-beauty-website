@@ -1,0 +1,27 @@
+{
+  "name": "Raffaella Beauty Studio - Salon Înfrumusețare Premium București",
+  "short_name": "Raffaella Beauty",
+  "description": "Salon de înfrumusețare premium în București. Epilare definitivă, extensii gene, laminare, tratamente faciale și scanare ten.",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#ffffff",
+  "theme_color": "#C9A961",
+  "orientation": "portrait-primary",
+  "icons": [
+    {
+      "src": "/assets/logo-raffaella.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "any maskable"
+    },
+    {
+      "src": "/assets/logo-raffaella.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any maskable"
+    }
+  ],
+  "categories": ["beauty", "health", "lifestyle"],
+  "lang": "ro",
+  "dir": "ltr"
+}
