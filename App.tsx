@@ -8,7 +8,8 @@ import { Gallery } from "./components/Gallery";
 import { Contact } from "./components/Contact";
 import { Footer } from "./components/Footer";
 import { CookieBanner } from "./components/CookieBanner";
-import { Analytics } from "./components/Analytics";
+import { Analytics } from "@vercel/analytics/react";
+import { Analytics as GoogleAnalytics } from "./components/Analytics";
 import { GoogleAds } from "./components/GoogleAds";
 import { SEO } from "./components/SEO";
 import { StructuredData } from "./components/StructuredData";
@@ -100,6 +101,7 @@ export default function App() {
       <Router>
         <div className="min-h-screen bg-white text-gray-900">
           <Analytics />
+          <GoogleAnalytics />
           <GoogleAds />
           <ScrollToTop />
           <AppLayout />
