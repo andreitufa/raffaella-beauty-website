@@ -72,7 +72,7 @@ function HomePage() {
   return (
     <>
       <SEO
-        title="Salon Înfrumusețare Premium București - Raffaella Beauty Studio"
+        title="Raffaella Beauty Studio - Salon Înfrumusețare Premium București"
         description="Salon de înfrumusețare premium în București. Epilare definitivă Infinity Laser Pro, extensii gene, laminare gene și sprâncene, tratamente faciale Oxigenera Pro, scanare ten Skin Doctor. Programări: 0765 315 537"
         keywords="salon infrumusetare bucuresti, epilare definitiva bucuresti, extensii gene bucuresti, laminare gene bucuresti, tratamente faciale bucuresti, infinity laser pro, oxigenera pro, skin doctor, raffaella beauty"
         canonical="/"
