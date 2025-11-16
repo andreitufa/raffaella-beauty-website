@@ -1,10 +1,9 @@
 import { Helmet } from "react-helmet-async";
 
 // Google Ads Conversion Tracking
-// Replace with your actual conversion IDs
-const GOOGLE_ADS_CONVERSION_ID = null; // Example: "AW-123456789"
-const GOOGLE_ADS_PHONE_CONVERSION_LABEL = null; // Example: "abc123"
-const GOOGLE_ADS_BOOKING_CONVERSION_LABEL = null; // Example: "def456"
+const GOOGLE_ADS_CONVERSION_ID = "AW-17734809518";
+const GOOGLE_ADS_PHONE_CONVERSION_LABEL = null; // To be configured later
+const GOOGLE_ADS_BOOKING_CONVERSION_LABEL = "1M7-CL7VgsEbEK7vzohC"; // Book appointment conversion
 
 export function GoogleAds() {
   return (
