@@ -104,7 +104,7 @@ export function Services() {
                   />
                   
                   {/* Elegant Overlay with "Vezi Prețuri" */}
-                  <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-black/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 flex items-end justify-center pb-8">
+                  <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-black/20 to-transparent opacity-100 md:opacity-0 md:group-hover:opacity-100 transition-opacity duration-500 flex items-end justify-center pb-8">
                     <span className="text-white text-sm tracking-[0.2em] uppercase border border-white/50 px-6 py-3 backdrop-blur-sm">
                       Vezi Prețuri
                     </span>
