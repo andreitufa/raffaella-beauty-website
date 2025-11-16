@@ -210,3 +210,4 @@ git checkout -b feature/noua-functie
 ---
 
 **Rezultat**: Vei avea acces complet la site de pe orice computer, oriunde în lume, cu Cursor și deploy automat.
+

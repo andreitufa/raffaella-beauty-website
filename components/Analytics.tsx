@@ -2,9 +2,8 @@ import { Helmet } from "react-helmet-async";
 import { useEffect } from "react";
 import { useLocation } from "react-router-dom";
 
-// Google Analytics 4 Measurement ID - Replace with your actual ID
-// Set to null to disable tracking until you have a real ID
-const GA_MEASUREMENT_ID = null; // Example: "G-XXXXXXXXXX"
+// Google Analytics 4 Measurement ID
+const GA_MEASUREMENT_ID = "G-QZM7774P3J";
 
 // Facebook Pixel ID - Replace with your actual ID
 // Set to null to disable tracking until you have a real ID
