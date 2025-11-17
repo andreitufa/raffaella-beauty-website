@@ -6,27 +6,9 @@ const GOOGLE_ADS_PHONE_CONVERSION_LABEL = null; // To be configured later
 const GOOGLE_ADS_BOOKING_CONVERSION_LABEL = "1M7-CL7VgsEbEK7vzohC"; // Book appointment conversion
 
 export function GoogleAds() {
-  return (
-    <Helmet>
-      {/* Google Ads Global Site Tag - Only load if conversion ID is provided */}
-      {GOOGLE_ADS_CONVERSION_ID && (
-        <>
-          <script
-            async
-            src={`https://www.googletagmanager.com/gtag/js?id=${GOOGLE_ADS_CONVERSION_ID}`}
-          />
-          <script>
-            {`
-              window.dataLayer = window.dataLayer || [];
-              function gtag(){dataLayer.push(arguments);}
-              gtag('js', new Date());
-              gtag('config', '${GOOGLE_ADS_CONVERSION_ID}');
-            `}
-          </script>
-        </>
-      )}
-    </Helmet>
-  );
+  // Google Ads config is now included in Analytics.tsx
+  // This component only provides conversion tracking functions
+  return null;
 }
 
 // Conversion tracking functions for Google Ads

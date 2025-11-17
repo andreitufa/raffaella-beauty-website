@@ -45,6 +45,7 @@ export function Analytics() {
                 anonymize_ip: true,
                 cookie_flags: 'SameSite=None;Secure'
               });
+              gtag('config', 'AW-17734809518');
             `}
           </script>
         </>
