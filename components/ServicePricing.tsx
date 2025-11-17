@@ -1,6 +1,7 @@
 import { motion } from "motion/react";
 import { ArrowLeft } from "lucide-react";
 import { Link } from "react-router-dom";
+import { trackBookingConversion } from "./GoogleAds";
 const logoFull = "/assets/logo-raffaella.png";
 
 interface PricingItem {
@@ -160,6 +161,9 @@ export function ServicePricing({ serviceName, subtitle, image, items, imageConta
             href="https://www.notino.ro/saloane/raffaella-beauty-studio/"
             target="_blank"
             rel="noopener noreferrer"
+            onClick={() => {
+              trackBookingConversion(1);
+            }}
             className="inline-block border-2 border-[var(--gold)] text-gray-800 hover:bg-[var(--gold)] hover:text-white px-12 py-4 text-sm tracking-[0.2em] uppercase transition-all duration-300"
           >
             Programează-te Acum

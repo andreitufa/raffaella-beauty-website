@@ -7,6 +7,7 @@ const epilareImg = "/assets/epilare-definitiva.jpeg";
 import { SEO } from "../components/SEO";
 import { StructuredData } from "../components/StructuredData";
 import { trackPriceListView } from "../components/Analytics";
+import { trackBookingConversion } from "../components/GoogleAds";
 
 interface PricingItem {
   name: string;
@@ -293,6 +294,9 @@ export function EpilareDefinitiva() {
             href="https://www.notino.ro/saloane/raffaella-beauty-studio/"
             target="_blank"
             rel="noopener noreferrer"
+            onClick={() => {
+              trackBookingConversion(1);
+            }}
             className="inline-block border-2 border-[var(--gold)] text-gray-800 hover:bg-[var(--gold)] hover:text-white px-12 py-4 text-sm tracking-[0.2em] uppercase transition-all duration-300"
           >
             Programează-te Acum
