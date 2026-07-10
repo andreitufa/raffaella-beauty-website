@@ -1,15 +1,56 @@
+# Raffaella Beauty Studio - www.raffaellabeauty.ro
+# Toate paginile sunt servite ca HTML static complet (prerendering).
+
 User-agent: *
 Allow: /
 
-# Sitemap
-Sitemap: https://raffaellabeauty.ro/sitemap.xml
+# --- Boti AI: permisi explicit, ca platformele AI sa poata cita salonul ---
 
-# Block admin and private areas
-Disallow: /admin/
-Disallow: /private/
-
-# Allow all important pages for SEO
+# OpenAI (ChatGPT)
+User-agent: GPTBot
 Allow: /
-Allow: /preturi/
-Allow: /contact
-Allow: /galerie
+
+User-agent: ChatGPT-User
+Allow: /
+
+User-agent: OAI-SearchBot
+Allow: /
+
+# Anthropic (Claude)
+User-agent: ClaudeBot
+Allow: /
+
+User-agent: anthropic-ai
+Allow: /
+
+User-agent: Claude-Web
+Allow: /
+
+# Perplexity
+User-agent: PerplexityBot
+Allow: /
+
+User-agent: Perplexity-User
+Allow: /
+
+# Google (Gemini si AI Overviews)
+User-agent: Google-Extended
+Allow: /
+
+# Microsoft Copilot (via Bing)
+User-agent: Bingbot
+Allow: /
+
+# Apple (Siri / Apple Intelligence)
+User-agent: Applebot
+Allow: /
+
+User-agent: Applebot-Extended
+Allow: /
+
+# Meta AI
+User-agent: meta-externalagent
+Allow: /
+
+# Sitemap
+Sitemap: https://www.raffaellabeauty.ro/sitemap.xml

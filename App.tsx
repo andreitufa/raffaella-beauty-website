@@ -1,4 +1,4 @@
-import { BrowserRouter as Router, Routes, Route, useLocation } from "react-router-dom";
+import { BrowserRouter, Routes, Route, useLocation } from "react-router-dom";
 import { useEffect } from "react";
 import { HelmetProvider } from "react-helmet-async";
 import { Navigation } from "./components/Navigation";
@@ -13,6 +13,7 @@ import { Analytics as GoogleAnalytics } from "./components/Analytics";
 import { GoogleAds } from "./components/GoogleAds";
 import { SEO } from "./components/SEO";
 import { StructuredData } from "./components/StructuredData";
+import { ServiceFaq } from "./components/ServiceFaq";
 import { EpilareDefinitiva } from "./pages/EpilareDefinitiva";
 import { ExtensiiGene } from "./pages/ExtensiiGene";
 import { TratamenteFaciale } from "./pages/TratamenteFaciale";
@@ -22,6 +23,7 @@ import { TermeniConditii } from "./pages/TermeniConditii";
 import { PoliticaConfidentialitate } from "./pages/PoliticaConfidentialitate";
 import { ANPC } from "./pages/ANPC";
 import { SolutionareLitigii } from "./pages/SolutionareLitigii";
+import { NotFound } from "./pages/NotFound";
 
 function ScrollToTop() {
   const { pathname, hash } = useLocation();
@@ -62,8 +64,8 @@ function AppLayout() {
         <Route path="/anpc" element={<ANPC />} />
         <Route path="/solutionare-litigii" element={<SolutionareLitigii />} />
         <Route path="/contact" element={<ContactPage />} />
-        {/* Catch-all route for any unmatched paths */}
-        <Route path="*" element={<HomePage />} />
+        {/* Pagină 404 reală (noindex) în loc de duplicat al homepage-ului */}
+        <Route path="*" element={<NotFound />} />
       </Routes>
     </>
   );
@@ -83,6 +85,36 @@ function HomePage() {
       <Services />
       <Gallery />
       <Contact />
+      <ServiceFaq
+        title="Întrebări frecvente despre salon"
+        faqs={[
+          {
+            question: "Unde se află salonul Raffaella Beauty Studio?",
+            answer:
+              "Salonul se află în București, pe Strada Vaselor nr. 56, ap. 2, sector 2 (cod poștal 020257), aproape de zona Iancului. Ne găsești ușor cu transportul public sau cu mașina.",
+          },
+          {
+            question: "Ce servicii oferă Raffaella Beauty Studio?",
+            answer:
+              "Oferim epilare definitivă cu Infinity Laser Pro pentru femei și bărbați, extensii de gene (1D-6D, Wet Look, Solisse), laminare de gene și sprâncene, tratamente faciale Oxigenera Pro și scanare a tenului cu Skin Doctor.",
+          },
+          {
+            question: "Care este programul salonului?",
+            answer:
+              "Suntem deschiși de luni până vineri între 09:00 și 19:00 și sâmbăta între 09:00 și 15:00. Duminica este închis.",
+          },
+          {
+            question: "Cum fac o programare?",
+            answer:
+              "Telefonic la 0765 315 537 sau online prin platforma Notino, unde vezi în timp real intervalele disponibile. Poți scrie și pe Instagram la @raffaella__beauty.",
+          },
+          {
+            question: "Cum se plătesc serviciile?",
+            answer:
+              "Acceptăm plata cash și cu cardul, în RON, direct la salon. Prețurile complete pentru fiecare serviciu sunt publicate pe paginile de prețuri ale site-ului.",
+          },
+        ]}
+      />
     </>
   );
 }
@@ -90,7 +122,36 @@ function HomePage() {
 function ContactPage() {
   return (
     <div className="min-h-screen bg-white pt-0">
+      <SEO
+        title="Contact și Programări - Salon București"
+        description="Contactează Raffaella Beauty Studio: Strada Vaselor nr. 56, București. Telefon 0765 315 537. Program: L-V 09:00-19:00, S 09:00-15:00. Programări online prin Notino."
+        keywords="contact raffaella beauty, programare salon bucuresti, salon strada vaselor, salon sector 2 bucuresti"
+        canonical="/contact"
+      />
+      <StructuredData
+        type="BreadcrumbList"
+        breadcrumbs={[
+          { name: "Acasă", url: "/" },
+          { name: "Contact", url: "/contact" },
+        ]}
+      />
       <Contact />
+    </div>
+  );
+}
+
+// Conținutul aplicației, fără router: e folosit și la prerendering (build),
+// unde rulează într-un StaticRouter, și în browser (BrowserRouter).
+export function AppContent() {
+  return (
+    <div className="min-h-screen bg-white text-gray-900">
+      <Analytics />
+      <GoogleAnalytics />
+      <GoogleAds />
+      <ScrollToTop />
+      <AppLayout />
+      <Footer />
+      <CookieBanner />
     </div>
   );
 }
@@ -98,17 +159,9 @@ function ContactPage() {
 export default function App() {
   return (
     <HelmetProvider>
-      <Router>
-        <div className="min-h-screen bg-white text-gray-900">
-          <Analytics />
-          <GoogleAnalytics />
-          <GoogleAds />
-          <ScrollToTop />
-          <AppLayout />
-          <Footer />
-          <CookieBanner />
-        </div>
-      </Router>
+      <BrowserRouter>
+        <AppContent />
+      </BrowserRouter>
     </HelmetProvider>
   );
 }

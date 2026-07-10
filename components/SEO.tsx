@@ -16,12 +16,14 @@ export function SEO({
   keywords,
   canonical,
   ogType = "website",
-  ogImage = "https://raffaellabeauty.ro/og-image.jpg",
+  ogImage = "https://www.raffaellabeauty.ro/assets/logo-raffaella.png",
   noindex = false,
 }: SEOProps) {
   const siteName = "Raffaella Beauty Studio";
-  const fullTitle = title.includes(siteName) ? title : `${title} | ${siteName}`;
-  const siteUrl = "https://raffaellabeauty.ro";
+  // evită dublarea brandului în titlu (ex. „... | Raffaella Beauty | Raffaella Beauty Studio")
+  const fullTitle = title.includes("Raffaella Beauty") ? title : `${title} | ${siteName}`;
+  // domeniul canonic este www (apex-ul redirecționează 307 către www)
+  const siteUrl = "https://www.raffaellabeauty.ro";
   const fullCanonical = canonical ? `${siteUrl}${canonical}` : siteUrl;
 
   return (

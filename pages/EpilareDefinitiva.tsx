@@ -6,6 +6,7 @@ const logoFull = "/assets/logo-raffaella.png";
 const epilareImg = "/assets/epilare-definitiva.jpeg";
 import { SEO } from "../components/SEO";
 import { StructuredData } from "../components/StructuredData";
+import { ServiceFaq } from "../components/ServiceFaq";
 import { trackPriceListView } from "../components/Analytics";
 import { trackBookingConversion } from "../components/GoogleAds";
 
@@ -163,6 +164,28 @@ export function EpilareDefinitiva() {
 
   return (
     <div className="min-h-screen bg-white">
+      <SEO
+        title="Epilare Definitivă Infinity Laser Pro - Prețuri București"
+        description="Epilare definitivă cu laser Infinity Laser Pro în București, pentru femei și bărbați. Prețuri de la 80 RON pe zonă, Full Body 450 RON. Vezi lista completă de prețuri. Programări: 0765 315 537"
+        keywords="epilare definitiva bucuresti, epilare laser bucuresti, infinity laser pro, epilare definitiva pret, epilare definitiva barbati bucuresti"
+        canonical="/preturi/epilare-definitiva"
+      />
+      <StructuredData
+        type="Service"
+        service={{
+          name: "Epilare Definitivă Infinity Laser Pro",
+          description: "Epilare definitivă cu tehnologie laser de ultimă generație Infinity Laser Pro, pentru femei și bărbați",
+          priceRange: "80-450 RON"
+        }}
+      />
+      <StructuredData
+        type="BreadcrumbList"
+        breadcrumbs={[
+          { name: "Acasă", url: "/" },
+          { name: "Servicii", url: "/#servicii" },
+          { name: "Epilare Definitivă", url: "/preturi/epilare-definitiva" }
+        ]}
+      />
       {/* Logo Section - Sticky Header */}
       <div className="sticky top-0 z-50 bg-white/95 backdrop-blur-sm border-b border-[var(--gold)]/10">
         <div className="max-w-7xl mx-auto px-6 py-4 md:py-5">
@@ -303,6 +326,37 @@ export function EpilareDefinitiva() {
           </a>
         </motion.div>
       </div>
+
+      <ServiceFaq
+        intro="Epilarea definitivă la Raffaella Beauty Studio se realizează cu aparatul Infinity Laser Pro, o tehnologie laser de ultimă generație, potrivită atât pentru femei, cât și pentru bărbați. Salonul se află pe Strada Vaselor nr. 56, București (sector 2), iar prețurile pornesc de la 80 RON pe zonă."
+        faqs={[
+          {
+            question: "Cât costă epilarea definitivă în București, la Raffaella Beauty Studio?",
+            answer:
+              "Prețurile pentru femei pornesc de la 80 RON pe zonă (mustață, bărbie, linie bikini) și ajung la 450 RON pentru pachetul Full Body, care include axilă, inghinal total, picioare lung, interfesieri, brațe lung și degete. Pentru bărbați, prețurile sunt între 130 RON (axilă) și 280 RON (spate sau picioare integral).",
+          },
+          {
+            question: "Ce aparat se folosește pentru epilarea definitivă?",
+            answer:
+              "Folosim Infinity Laser Pro, un laser profesional de ultimă generație, care permite tratarea eficientă și confortabilă a majorității zonelor, cu ședințe rapide și senzație de disconfort redusă față de metodele clasice.",
+          },
+          {
+            question: "Câte ședințe de epilare definitivă sunt necesare?",
+            answer:
+              "Numărul de ședințe diferă în funcție de zonă, tipul de piele și de păr. De regulă sunt recomandate mai multe ședințe la interval de câteva săptămâni, iar planul exact se stabilește la prima vizită, după evaluarea specialistului.",
+          },
+          {
+            question: "Fac și bărbații epilare definitivă la Raffaella Beauty?",
+            answer:
+              "Da. Avem o listă de prețuri dedicată bărbaților, cu zone precum contur barbă (200 RON), piept și umeri (150 RON), spate (280 RON), abdomen (150 RON) sau picioare integral (280 RON).",
+          },
+          {
+            question: "Cum mă programez la epilare definitivă?",
+            answer:
+              "Programările se fac telefonic la 0765 315 537 sau online prin platforma Notino. Salonul este deschis de luni până vineri între 09:00 și 19:00, iar sâmbăta între 09:00 și 15:00.",
+          },
+        ]}
+      />
     </div>
   );
 }

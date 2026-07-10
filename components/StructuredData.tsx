@@ -16,12 +16,12 @@ export function StructuredData({ type, service, breadcrumbs }: StructuredDataPro
   const getLocalBusinessSchema = () => ({
     "@context": "https://schema.org",
     "@type": "BeautySalon",
-    "@id": "https://raffaellabeauty.ro/#organization",
+    "@id": "https://www.raffaellabeauty.ro/#organization",
     name: "Raffaella Beauty Studio",
     alternateName: "Raffaella Beauty",
-    url: "https://raffaellabeauty.ro",
-    logo: "https://raffaellabeauty.ro/logo.png",
-    image: "https://raffaellabeauty.ro/og-image.jpg",
+    url: "https://www.raffaellabeauty.ro",
+    logo: "https://www.raffaellabeauty.ro/logo.png",
+    image: "https://www.raffaellabeauty.ro/og-image.jpg",
     description: "Salon de înfrumusețare premium în București. Oferim epilare definitivă cu Infinity Laser Pro, extensii de gene, laminare gene și sprâncene, tratamente faciale Oxigenera Pro și scanare ten Skin Doctor.",
     priceRange: "$$",
     telephone: "+40765315537",
@@ -158,7 +158,7 @@ export function StructuredData({ type, service, breadcrumbs }: StructuredDataPro
         "@type": "ListItem",
         position: index + 1,
         name: crumb.name,
-        item: `https://raffaellabeauty.ro${crumb.url}`
+        item: `https://www.raffaellabeauty.ro${crumb.url}`
       }))
     };
   };

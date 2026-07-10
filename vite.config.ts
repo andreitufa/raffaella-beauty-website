@@ -35,6 +35,11 @@ function unversionedImportAlias() {
 // https://vitejs.dev/config/
 export default defineConfig({
   plugins: [react(), figmaAssetPlugin(), unversionedImportAlias()],
+  ssr: {
+    // pachete CJS care trebuie incluse în bundle-ul de prerendering
+    // (importul lor direct din Node ESM eșuează la named exports)
+    noExternal: ['react-helmet-async'],
+  },
   server: {
     port: 5173,
     host: true
