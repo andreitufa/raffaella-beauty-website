@@ -7,6 +7,8 @@ interface SEOProps {
   canonical?: string;
   ogType?: string;
   ogImage?: string;
+  // descriere separată pentru share pe WhatsApp/Facebook (dacă diferă de meta description)
+  ogDescription?: string;
   noindex?: boolean;
 }
 
@@ -16,7 +18,9 @@ export function SEO({
   keywords,
   canonical,
   ogType = "website",
-  ogImage = "https://www.raffaellabeauty.ro/assets/logo-raffaella.png",
+  // imagine dedicată 1200x630 pentru previzualizări (WhatsApp taie urât logo-ul lat)
+  ogImage = "https://www.raffaellabeauty.ro/assets/og-image.jpg",
+  ogDescription,
   noindex = false,
 }: SEOProps) {
   const siteName = "Raffaella Beauty Studio";
@@ -39,8 +43,11 @@ export function SEO({
       <meta property="og:type" content={ogType} />
       <meta property="og:url" content={fullCanonical} />
       <meta property="og:title" content={fullTitle} />
-      <meta property="og:description" content={description} />
+      <meta property="og:description" content={ogDescription || description} />
       <meta property="og:image" content={ogImage} />
+      <meta property="og:image:width" content="1200" />
+      <meta property="og:image:height" content="630" />
+      <meta property="og:image:alt" content={siteName} />
       <meta property="og:site_name" content={siteName} />
       <meta property="og:locale" content="ro_RO" />
 
@@ -48,7 +55,7 @@ export function SEO({
       <meta name="twitter:card" content="summary_large_image" />
       <meta name="twitter:url" content={fullCanonical} />
       <meta name="twitter:title" content={fullTitle} />
-      <meta name="twitter:description" content={description} />
+      <meta name="twitter:description" content={ogDescription || description} />
       <meta name="twitter:image" content={ogImage} />
 
       {/* Additional SEO */}
