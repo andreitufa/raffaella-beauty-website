@@ -45,8 +45,8 @@ export function SEO({
       <meta property="og:title" content={fullTitle} />
       <meta property="og:description" content={ogDescription || description} />
       <meta property="og:image" content={ogImage} />
-      <meta property="og:image:width" content="1200" />
-      <meta property="og:image:height" content="630" />
+      <meta property="og:image:width" content="1080" />
+      <meta property="og:image:height" content="1080" />
       <meta property="og:image:alt" content={siteName} />
       <meta property="og:site_name" content={siteName} />
       <meta property="og:locale" content="ro_RO" />
