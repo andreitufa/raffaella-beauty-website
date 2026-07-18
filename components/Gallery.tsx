@@ -1,23 +1,43 @@
 import { motion } from "motion/react";
-import { useEffect } from "react";
+import { useEffect, useRef } from "react";
 
 export function Gallery() {
-  // Load Instagram embed script from Curator.io
+  const sectionRef = useRef<HTMLElement>(null);
+  const loadedRef = useRef(false);
+
+  // Feed-ul Instagram (Curator.io) se încarcă abia când vizitatorul se apropie
+  // de secțiune — scriptul + cele ~25 de imagini nu mai blochează încărcarea paginii.
   useEffect(() => {
-    /* curator-feed-default-feed-layout */
-    (function(){
-      var i,e,d=document,s="script";
-      i=d.createElement("script");
-      i.async=1;
-      i.charset="UTF-8";
-      i.src="https://cdn.curator.io/published/ca4e9991-eee4-410c-857e-25f57c7e74e8.js";
-      e=d.getElementsByTagName(s)[0];
-      e.parentNode.insertBefore(i, e);
-    })();
+    const loadCurator = () => {
+      if (loadedRef.current) return;
+      loadedRef.current = true;
+      const script = document.createElement("script");
+      script.async = true;
+      script.charset = "UTF-8";
+      script.src = "https://cdn.curator.io/published/ca4e9991-eee4-410c-857e-25f57c7e74e8.js";
+      document.body.appendChild(script);
+    };
+
+    const el = sectionRef.current;
+    if (!el || !("IntersectionObserver" in window)) {
+      loadCurator();
+      return;
+    }
+    const observer = new IntersectionObserver(
+      (entries) => {
+        if (entries.some((e) => e.isIntersecting)) {
+          loadCurator();
+          observer.disconnect();
+        }
+      },
+      { rootMargin: "600px" },
+    );
+    observer.observe(el);
+    return () => observer.disconnect();
   }, []);
 
   return (
-    <section id="galerie" className="py-20 md:py-24 bg-white">
+    <section id="galerie" ref={sectionRef} className="py-20 md:py-24 bg-white">
       <div className="max-w-7xl mx-auto px-6">
         <motion.div
           initial={{ opacity: 0, y: 40 }}

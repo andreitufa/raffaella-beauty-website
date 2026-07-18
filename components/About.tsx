@@ -1,5 +1,3 @@
-import { motion } from "motion/react";
-
 export function About() {
   return (
     <section id="about" className="pt-24 md:pt-28 pb-20 md:pb-24 px-6 bg-white relative overflow-hidden">
@@ -7,13 +5,10 @@ export function About() {
       <div className="absolute top-20 right-10 w-64 h-64 bg-[var(--gold)]/5 rounded-full blur-3xl" />
       <div className="absolute bottom-20 left-10 w-96 h-96 bg-[var(--gold)]/5 rounded-full blur-3xl" />
       
+      {/* Secțiunea de deasupra pliului: fără animație de intrare, ca textul
+          să fie vizibil imediat în HTML-ul pre-randat (LCP). */}
       <div className="max-w-4xl mx-auto text-center relative z-10">
-        <motion.div
-          initial={{ opacity: 0, y: 40 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          transition={{ duration: 0.8 }}
-        >
+        <div>
           {/* Decorative Top Line */}
           <div className="flex items-center justify-center gap-4 mb-8">
             <div className="w-16 h-px bg-gradient-to-r from-transparent to-[var(--gold)]" />
@@ -45,7 +40,7 @@ export function About() {
             <div className="w-2 h-2 bg-[var(--gold)] rounded-full" />
             <div className="w-16 h-px bg-gradient-to-l from-transparent to-[var(--gold)]" />
           </div>
-        </motion.div>
+        </div>
       </div>
     </section>
   );

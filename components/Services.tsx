@@ -96,6 +96,8 @@ export function Services() {
                   <img
                     src={service.image}
                     alt={service.title}
+                    loading="lazy"
+                    decoding="async"
                     className={`w-full h-full transition-transform duration-700 ${
                       index === services.length - 1 
                         ? 'object-contain p-4 group-hover:scale-100' 
