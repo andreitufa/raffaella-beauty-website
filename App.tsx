@@ -14,6 +14,7 @@ import { GoogleAds } from "./components/GoogleAds";
 import { SEO } from "./components/SEO";
 import { StructuredData } from "./components/StructuredData";
 import { ServiceFaq } from "./components/ServiceFaq";
+import { WhatsAppFloatingButton } from "./components/WhatsAppBooking";
 import { EpilareDefinitiva } from "./pages/EpilareDefinitiva";
 import { ExtensiiGene } from "./pages/ExtensiiGene";
 import { TratamenteFaciale } from "./pages/TratamenteFaciale";
@@ -159,6 +160,7 @@ export function AppContent() {
       <ScrollToTop />
       <AppLayout />
       <Footer />
+      <WhatsAppFloatingButton />
       <CookieBanner />
     </div>
   );

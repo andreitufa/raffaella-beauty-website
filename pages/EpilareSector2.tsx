@@ -5,6 +5,7 @@ import { StructuredData } from "../components/StructuredData";
 import { ServiceFaq } from "../components/ServiceFaq";
 import { PageHeader } from "../components/PageHeader";
 import { trackBookingConversion } from "../components/GoogleAds";
+import { WhatsAppServiceButton } from "../components/WhatsAppBooking";
 
 const zone = [
   "Iancului", "Obor", "Pantelimon", "Vatra Luminoasă", "Colentina",
@@ -188,15 +189,18 @@ export function EpilareSector2() {
           <p className="text-gray-600 mb-8" style={{ fontWeight: 300 }}>
             Programează o ședință și convinge-te: epilarea definitivă poate fi complet nedureroasă.
           </p>
-          <a
-            href="https://www.notino.ro/saloane/raffaella-beauty-studio/"
-            target="_blank"
-            rel="noopener noreferrer"
-            onClick={() => trackBookingConversion(1)}
-            className="inline-block border-2 border-[var(--gold)] text-gray-800 hover:bg-[var(--gold)] hover:text-white px-12 py-4 text-sm tracking-[0.2em] uppercase transition-all duration-300"
-          >
-            Programează-te Acum
-          </a>
+          <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
+            <a
+              href="https://www.notino.ro/saloane/raffaella-beauty-studio/"
+              target="_blank"
+              rel="noopener noreferrer"
+              onClick={() => trackBookingConversion(1)}
+              className="inline-block border-2 border-[var(--gold)] text-gray-800 hover:bg-[var(--gold)] hover:text-white px-12 py-4 text-sm tracking-[0.2em] uppercase transition-all duration-300"
+            >
+              Programează-te Acum
+            </a>
+            <WhatsAppServiceButton service="Epilare Definitivă" />
+          </div>
           <p className="text-gray-500 text-sm mt-4" style={{ fontWeight: 300 }}>
             sau telefonic: 0765 315 537
           </p>

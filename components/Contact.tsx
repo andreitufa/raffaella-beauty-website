@@ -1,8 +1,9 @@
 import { motion } from "motion/react";
 import { MapPin, Phone, Clock, Instagram, Facebook } from "lucide-react";
 import { useState } from "react";
-import { trackPhoneClick, trackWhatsAppClick, trackBookingClick } from "./Analytics";
+import { trackPhoneClick, trackBookingClick } from "./Analytics";
 import { trackPhoneCallConversion, trackBookingConversion } from "./GoogleAds";
+import { WhatsAppBookingButton } from "./WhatsAppBooking";
 
 // TikTok Icon Component
 const TikTokIcon = ({ className }: { className?: string }) => (
@@ -37,9 +38,6 @@ export function Contact() {
     }
   };
 
-  const handleWhatsAppClick = () => {
-    trackWhatsAppClick();
-  };
   return (
     <section id="contact" className="py-20 md:py-24 bg-gradient-to-b from-white to-gray-50/50 relative overflow-hidden">
       {/* Decorative Background */}
@@ -251,16 +249,7 @@ export function Contact() {
                   </div>
                 </button>
                 
-                <a
-                  href="https://wa.me/40765315537"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="group relative block w-full overflow-hidden border-2 border-gray-300 hover:border-[var(--gold)] transition-colors duration-300"
-                >
-                  <div className="text-gray-800 group-hover:text-[var(--gold)] text-center py-5 px-8 text-sm tracking-[0.2em] uppercase transition-colors duration-300">
-                    WhatsApp
-                  </div>
-                </a>
+                <WhatsAppBookingButton />
               </div>
             </div>
           </motion.div>

@@ -7,6 +7,7 @@ const epilareImg = "/assets/epilare-definitiva.jpeg";
 import { SEO } from "../components/SEO";
 import { StructuredData } from "../components/StructuredData";
 import { ServiceFaq } from "../components/ServiceFaq";
+import { WhatsAppServiceButton } from "../components/WhatsAppBooking";
 import { trackPriceListView } from "../components/Analytics";
 import { trackBookingConversion } from "../components/GoogleAds";
 
@@ -313,17 +314,20 @@ export function EpilareDefinitiva() {
           <p className="text-gray-600 mb-8" style={{ fontWeight: 300 }}>
             Programează-te acum pentru o experiență de înfrumusețare de excepție
           </p>
-          <a
-            href="https://www.notino.ro/saloane/raffaella-beauty-studio/"
-            target="_blank"
-            rel="noopener noreferrer"
-            onClick={() => {
-              trackBookingConversion(1);
-            }}
-            className="inline-block border-2 border-[var(--gold)] text-gray-800 hover:bg-[var(--gold)] hover:text-white px-12 py-4 text-sm tracking-[0.2em] uppercase transition-all duration-300"
-          >
-            Programează-te Acum
-          </a>
+          <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
+            <a
+              href="https://www.notino.ro/saloane/raffaella-beauty-studio/"
+              target="_blank"
+              rel="noopener noreferrer"
+              onClick={() => {
+                trackBookingConversion(1);
+              }}
+              className="inline-block border-2 border-[var(--gold)] text-gray-800 hover:bg-[var(--gold)] hover:text-white px-12 py-4 text-sm tracking-[0.2em] uppercase transition-all duration-300"
+            >
+              Programează-te Acum
+            </a>
+            <WhatsAppServiceButton service="Epilare Definitivă" />
+          </div>
         </motion.div>
       </div>
 
