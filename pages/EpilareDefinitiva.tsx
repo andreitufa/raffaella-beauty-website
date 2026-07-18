@@ -328,7 +328,7 @@ export function EpilareDefinitiva() {
       </div>
 
       <ServiceFaq
-        intro="Epilarea definitivă la Raffaella Beauty Studio se realizează cu aparatul Infinity Laser Pro, o tehnologie laser de ultimă generație, potrivită atât pentru femei, cât și pentru bărbați. Salonul se află pe Strada Vaselor nr. 56, București (sector 2), iar prețurile pornesc de la 80 RON pe zonă."
+        intro="Epilarea definitivă la Raffaella Beauty Studio se realizează cu aparatul Infinity cu triplu laser — Diodă, Alexandrite și Nd:YAG — complet nedureros, potrivit pentru femei și bărbați și pentru toate tipurile de piele. Salonul se află în Sectorul 2, București, iar prețurile pornesc de la 80 RON pe zonă."
         faqs={[
           {
             question: "Cât costă epilarea definitivă în București, la Raffaella Beauty Studio?",
@@ -338,7 +338,12 @@ export function EpilareDefinitiva() {
           {
             question: "Ce aparat se folosește pentru epilarea definitivă?",
             answer:
-              "Folosim Infinity Laser Pro, un laser profesional de ultimă generație, care permite tratarea eficientă și confortabilă a majorității zonelor, cu ședințe rapide și senzație de disconfort redusă față de metodele clasice.",
+              "Folosim aparatul Infinity cu triplu laser: Diodă (810 nm), Alexandrite (755 nm) și Nd:YAG (1064 nm) în același tratament. Combinația acoperă toate tipurile de piele și de păr — inclusiv pielea bronzată și firele fine.",
+          },
+          {
+            question: "Doare epilarea definitivă cu laser?",
+            answer:
+              "Nu. Triplul laser distribuie energia pe trei adâncimi diferite și răcește pielea continuu, așa că senzația este doar de căldură blândă. Majoritatea clientelor ne spun că nici nu și-au dat seama când a început ședința — inclusiv cele care au renunțat la alte saloane din cauza durerii.",
           },
           {
             question: "Câte ședințe de epilare definitivă sunt necesare?",

@@ -24,6 +24,9 @@ import { PoliticaConfidentialitate } from "./pages/PoliticaConfidentialitate";
 import { ANPC } from "./pages/ANPC";
 import { SolutionareLitigii } from "./pages/SolutionareLitigii";
 import { NotFound } from "./pages/NotFound";
+import { EpilareSector2 } from "./pages/EpilareSector2";
+import { Blog } from "./pages/blog/Blog";
+import { BlogPost } from "./pages/blog/BlogPost";
 
 function ScrollToTop() {
   const { pathname, hash } = useLocation();
@@ -47,11 +50,12 @@ function ScrollToTop() {
 function AppLayout() {
   const location = useLocation();
   const isPricingPage = location.pathname.startsWith('/preturi/');
+  const isStandalonePage = location.pathname.startsWith('/blog') || location.pathname === '/epilare-definitiva-sector-2';
   const isLegalPage = ['/termeni-conditii', '/politica-confidentialitate', '/anpc', '/solutionare-litigii', '/contact'].includes(location.pathname);
 
   return (
     <>
-      {!isPricingPage && !isLegalPage && <Navigation />}
+      {!isPricingPage && !isLegalPage && !isStandalonePage && <Navigation />}
       <Routes>
         <Route path="/" element={<HomePage />} />
         <Route path="/preturi/epilare-definitiva" element={<EpilareDefinitiva />} />
@@ -64,6 +68,9 @@ function AppLayout() {
         <Route path="/anpc" element={<ANPC />} />
         <Route path="/solutionare-litigii" element={<SolutionareLitigii />} />
         <Route path="/contact" element={<ContactPage />} />
+        <Route path="/epilare-definitiva-sector-2" element={<EpilareSector2 />} />
+        <Route path="/blog" element={<Blog />} />
+        <Route path="/blog/:slug" element={<BlogPost />} />
         {/* Pagină 404 reală (noindex) în loc de duplicat al homepage-ului */}
         <Route path="*" element={<NotFound />} />
       </Routes>

@@ -130,6 +130,24 @@ export function Footer() {
               </li>
               <li>
                 <Link 
+                  to="/epilare-definitiva-sector-2" 
+                  className="text-gray-500 hover:text-[var(--gold)] transition-colors text-sm"
+                  style={{ fontWeight: 300 }}
+                >
+                  Epilare Definitivă Sector 2
+                </Link>
+              </li>
+              <li>
+                <Link 
+                  to="/blog" 
+                  className="text-gray-500 hover:text-[var(--gold)] transition-colors text-sm"
+                  style={{ fontWeight: 300 }}
+                >
+                  Blog
+                </Link>
+              </li>
+              <li>
+                <Link 
                   to="/termeni-conditii" 
                   className="text-gray-500 hover:text-[var(--gold)] transition-colors text-sm"
                   style={{ fontWeight: 300 }}
