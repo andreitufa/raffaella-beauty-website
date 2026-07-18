@@ -2,7 +2,7 @@ import { useState } from "react";
 import { motion, AnimatePresence } from "motion/react";
 import { X } from "lucide-react";
 import { trackWhatsAppClick } from "./Analytics";
-import { trackBookingConversion } from "./GoogleAds";
+import { trackBookingConversion, trackWhatsAppConversion } from "./GoogleAds";
 
 const WHATSAPP_PHONE = "40765315537";
 
@@ -23,6 +23,7 @@ const SERVICES = [
 function openWhatsApp(service?: string) {
   trackWhatsAppClick();
   trackBookingConversion(1);
+  trackWhatsAppConversion(1);
   const text = service
     ? `Bună ziua! Aș dori o programare pentru *${service}*. Când aveți disponibilitate?`
     : "Bună ziua! Aș dori mai multe informații despre serviciile dumneavoastră.";
