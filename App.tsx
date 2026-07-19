@@ -1,5 +1,6 @@
 import { BrowserRouter, Routes, Route, useLocation } from "react-router-dom";
-import { useEffect } from "react";
+import { lazy, Suspense, useEffect } from "react";
+import type { ComponentType } from "react";
 import { HelmetProvider } from "react-helmet-async";
 import { Navigation } from "./components/Navigation";
 import { About } from "./components/About";
@@ -15,19 +16,44 @@ import { SEO } from "./components/SEO";
 import { StructuredData } from "./components/StructuredData";
 import { ServiceFaq } from "./components/ServiceFaq";
 import { WhatsAppFloatingButton } from "./components/WhatsAppBooking";
-import { EpilareDefinitiva } from "./pages/EpilareDefinitiva";
-import { ExtensiiGene } from "./pages/ExtensiiGene";
-import { TratamenteFaciale } from "./pages/TratamenteFaciale";
-import { LaminareGene } from "./pages/LaminareGene";
-import { ScanareTen } from "./pages/ScanareTen";
-import { TermeniConditii } from "./pages/TermeniConditii";
-import { PoliticaConfidentialitate } from "./pages/PoliticaConfidentialitate";
-import { ANPC } from "./pages/ANPC";
-import { SolutionareLitigii } from "./pages/SolutionareLitigii";
-import { NotFound } from "./pages/NotFound";
-import { EpilareSector2 } from "./pages/EpilareSector2";
-import { Blog } from "./pages/blog/Blog";
-import { BlogPost } from "./pages/blog/BlogPost";
+
+// Code splitting pe rute: paginile secundare se descarcă doar la navigare,
+// nu odată cu homepage-ul. Promisiunile de import sunt înregistrate ca
+// prerender-ul (SSR) să poată aștepta încărcarea lor — vezi entry-server.tsx.
+const lazyImportsInFlight: Promise<unknown>[] = [];
+
+export function waitForLazyImports(): Promise<unknown> {
+  return Promise.all(lazyImportsInFlight);
+}
+
+export function pendingLazyImportCount(): number {
+  return lazyImportsInFlight.length;
+}
+
+function lazyPage<P extends object>(
+  factory: () => Promise<Record<string, unknown>>,
+  exportName: string,
+): ComponentType<P> {
+  return lazy(() => {
+    const promise = factory();
+    lazyImportsInFlight.push(promise);
+    return promise.then((mod) => ({ default: mod[exportName] as ComponentType<P> }));
+  });
+}
+
+const EpilareDefinitiva = lazyPage(() => import("./pages/EpilareDefinitiva"), "EpilareDefinitiva");
+const ExtensiiGene = lazyPage(() => import("./pages/ExtensiiGene"), "ExtensiiGene");
+const TratamenteFaciale = lazyPage(() => import("./pages/TratamenteFaciale"), "TratamenteFaciale");
+const LaminareGene = lazyPage(() => import("./pages/LaminareGene"), "LaminareGene");
+const ScanareTen = lazyPage(() => import("./pages/ScanareTen"), "ScanareTen");
+const TermeniConditii = lazyPage(() => import("./pages/TermeniConditii"), "TermeniConditii");
+const PoliticaConfidentialitate = lazyPage(() => import("./pages/PoliticaConfidentialitate"), "PoliticaConfidentialitate");
+const ANPC = lazyPage(() => import("./pages/ANPC"), "ANPC");
+const SolutionareLitigii = lazyPage(() => import("./pages/SolutionareLitigii"), "SolutionareLitigii");
+const NotFound = lazyPage(() => import("./pages/NotFound"), "NotFound");
+const EpilareSector2 = lazyPage(() => import("./pages/EpilareSector2"), "EpilareSector2");
+const Blog = lazyPage(() => import("./pages/blog/Blog"), "Blog");
+const BlogPost = lazyPage(() => import("./pages/blog/BlogPost"), "BlogPost");
 
 function ScrollToTop() {
   const { pathname, hash } = useLocation();
@@ -57,7 +83,8 @@ function AppLayout() {
   return (
     <>
       {!isPricingPage && !isLegalPage && !isStandalonePage && <Navigation />}
-      <Routes>
+      <Suspense fallback={null}>
+        <Routes>
         <Route path="/" element={<HomePage />} />
         <Route path="/preturi/epilare-definitiva" element={<EpilareDefinitiva />} />
         <Route path="/preturi/extensii-gene" element={<ExtensiiGene />} />
@@ -72,9 +99,10 @@ function AppLayout() {
         <Route path="/epilare-definitiva-sector-2" element={<EpilareSector2 />} />
         <Route path="/blog" element={<Blog />} />
         <Route path="/blog/:slug" element={<BlogPost />} />
-        {/* Pagină 404 reală (noindex) în loc de duplicat al homepage-ului */}
-        <Route path="*" element={<NotFound />} />
-      </Routes>
+          {/* Pagină 404 reală (noindex) în loc de duplicat al homepage-ului */}
+          <Route path="*" element={<NotFound />} />
+        </Routes>
+      </Suspense>
     </>
   );
 }

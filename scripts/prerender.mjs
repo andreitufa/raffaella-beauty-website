@@ -41,7 +41,7 @@ const render = mod.render ?? mod.default?.render
 let failures = 0
 for (const route of routes) {
   try {
-    const { html, helmet } = render(route === '/404' ? '/pagina-inexistenta-404' : route)
+    const { html, helmet } = await render(route === '/404' ? '/pagina-inexistenta-404' : route)
 
     const headTags = [
       helmet.title.toString(),
