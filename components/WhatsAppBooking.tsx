@@ -21,7 +21,7 @@ const SERVICES = [
 ];
 
 function openWhatsApp(service?: string) {
-  trackWhatsAppClick();
+  trackWhatsAppClick(service);
   trackBookingConversion(1);
   trackWhatsAppConversion(1);
   const text = service

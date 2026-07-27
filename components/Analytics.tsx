@@ -114,11 +114,12 @@ export const trackPhoneClick = () => {
   });
 };
 
-export const trackWhatsAppClick = () => {
+export const trackWhatsAppClick = (service?: string) => {
   trackEvent("contact", {
     method: "whatsapp",
+    service: service || "nespecificat",
     event_category: "engagement",
-    event_label: "WhatsApp Click"
+    event_label: service ? `WhatsApp - ${service}` : "WhatsApp Click"
   });
 };
 
