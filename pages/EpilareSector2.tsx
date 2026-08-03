@@ -23,7 +23,7 @@ const preturiFemei = [
   { zona: "Full Body", pret: "450 RON" },
 ];
 
-const GOOGLE_REVIEWS_URL = "https://maps.app.goo.gl/G7ZyiQTNpEaixUtU8";
+const GOOGLE_REVIEWS_URL = "https://maps.app.goo.gl/kihM1dmcaZGGKpdh7";
 
 const NOTINO_OUTLINE =
   "inline-block border-2 border-[var(--gold)] text-gray-800 hover:bg-[var(--gold)] hover:text-white px-12 py-4 text-sm tracking-[0.2em] uppercase transition-all duration-300";

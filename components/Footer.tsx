@@ -33,7 +33,7 @@ export function Footer() {
             </h4>
             <div className="space-y-2">
               <a 
-                href="https://www.google.com/maps/search/?api=1&query=Strada+Vaselor+nr.+56+ap+2+București"
+                href="https://maps.app.goo.gl/kihM1dmcaZGGKpdh7"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="text-gray-500 hover:text-[var(--gold)] transition-colors text-sm block"

@@ -87,7 +87,7 @@ export function Contact() {
                     Adresă
                   </h3>
                   <a
-                    href="https://maps.app.goo.gl/G7ZyiQTNpEaixUtU8"
+                    href="https://maps.app.goo.gl/kihM1dmcaZGGKpdh7"
                     target="_blank"
                     rel="noopener noreferrer"
                     className="text-gray-600 hover:text-[var(--gold)] transition-colors leading-relaxed cursor-pointer block"
