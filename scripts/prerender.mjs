@@ -20,6 +20,7 @@ const routes = [
   '/preturi/scanare-ten',
   '/contact',
   '/epilare-definitiva-sector-2',
+  '/epilare-barbati',
   '/blog',
   '/blog/epilarea-definitiva-doare',
   '/blog/cat-costa-epilarea-definitiva-bucuresti',

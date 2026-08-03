@@ -159,6 +159,7 @@ export function ServicePricing({ serviceName, subtitle, image, items, imageConta
             Programează-te acum pentru o experiență de înfrumusețare de excepție
           </p>
           <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
+            <WhatsAppServiceButton service={serviceName} />
             <a
               href="https://www.notino.ro/saloane/raffaella-beauty-studio/"
               target="_blank"
@@ -170,7 +171,6 @@ export function ServicePricing({ serviceName, subtitle, image, items, imageConta
             >
               Programează-te Acum
             </a>
-            <WhatsAppServiceButton service={serviceName} />
           </div>
         </motion.div>
       </div>

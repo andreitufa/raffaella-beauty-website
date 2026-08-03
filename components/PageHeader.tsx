@@ -1,4 +1,3 @@
-import { motion } from "motion/react";
 import { ArrowLeft } from "lucide-react";
 import { Link } from "react-router-dom";
 const logoFull = "/assets/logo-raffaella.png";
@@ -10,16 +9,15 @@ interface PageHeaderProps {
 
 // Antet comun pentru paginile de sine stătătoare (blog, pagini locale):
 // logo sticky + link de întoarcere, în stilul paginilor de prețuri.
+// Fără motion: pe HTML prerendered, motion.img scria opacity:0 și provoca
+// hydration mismatch (#418 / #423) la hydrateRoot.
 export function PageHeader({ backTo = "/", backLabel = "Înapoi Acasă" }: PageHeaderProps) {
   return (
     <>
       <div className="sticky top-0 z-50 bg-white/95 backdrop-blur-sm border-b border-[var(--gold)]/10">
         <div className="max-w-7xl mx-auto px-6 py-4 md:py-5">
           <Link to="/" className="inline-block">
-            <motion.img
-              initial={{ opacity: 0, y: -20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6 }}
+            <img
               src={logoFull}
               alt="Raffaella Beauty"
               className="h-12 md:h-14 hover:opacity-80 transition-opacity"

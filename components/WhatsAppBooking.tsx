@@ -102,19 +102,21 @@ function ServicePickerModal({ onClose }: { onClose: () => void }) {
 
 // Buton de programare WhatsApp cu selector de servicii (pentru pagina de
 // contact și alte locuri generice).
+const WA_SOLID =
+  "inline-flex items-center justify-center gap-3 bg-[#25D366] hover:bg-[#1ebe57] text-white px-12 py-4 text-sm tracking-[0.2em] uppercase transition-all duration-300 shadow-md";
+const WA_SOLID_FULL =
+  "group relative block w-full overflow-hidden bg-[#25D366] hover:bg-[#1ebe57] transition-colors duration-300";
+
 export function WhatsAppBookingButton({ className }: { className?: string }) {
   const [open, setOpen] = useState(false);
   return (
     <>
       <button
         onClick={() => setOpen(true)}
-        className={
-          className ||
-          "group relative block w-full overflow-hidden border-2 border-[#25D366]/50 hover:border-[#25D366] transition-colors duration-300"
-        }
+        className={className || WA_SOLID_FULL}
       >
-        <div className="flex items-center justify-center gap-3 text-gray-800 group-hover:text-[#25D366] text-center py-5 px-8 text-sm tracking-[0.2em] uppercase transition-colors duration-300">
-          <WhatsAppIcon className="w-4 h-4 text-[#25D366]" />
+        <div className="flex items-center justify-center gap-3 text-white text-center py-5 px-8 text-sm tracking-[0.2em] uppercase">
+          <WhatsAppIcon className="w-4 h-4 text-white" />
           Programare WhatsApp
         </div>
       </button>
@@ -125,11 +127,18 @@ export function WhatsAppBookingButton({ className }: { className?: string }) {
 
 // Buton WhatsApp cu serviciul precompletat (pentru paginile de servicii:
 // nu mai e nevoie de selector, mesajul se referă direct la serviciul paginii).
-export function WhatsAppServiceButton({ service }: { service: string }) {
+// Folosește openWhatsApp → trackWhatsAppConversion (Google Ads AW).
+export function WhatsAppServiceButton({
+  service,
+  className,
+}: {
+  service: string;
+  className?: string;
+}) {
   return (
     <button
       onClick={() => openWhatsApp(service)}
-      className="inline-flex items-center justify-center gap-3 border-2 border-[#25D366]/50 text-gray-800 hover:bg-[#25D366] hover:border-[#25D366] hover:text-white px-12 py-4 text-sm tracking-[0.2em] uppercase transition-all duration-300"
+      className={className || WA_SOLID}
     >
       <WhatsAppIcon className="w-4 h-4" />
       Programare WhatsApp

@@ -226,30 +226,29 @@ export function Contact() {
               </p>
               
               <div className="space-y-5">
+                <WhatsAppBookingButton />
+
                 <button
                   onClick={() => {
                     trackBookingClick('Notino');
                     trackBookingConversion(1);
                     window.open('https://www.notino.ro/saloane/raffaella-beauty-studio/', '_blank');
                   }}
-                  className="group relative block w-full overflow-hidden"
+                  className="group relative block w-full overflow-hidden border-2 border-[var(--gold)]/40 hover:border-[var(--gold)] transition-colors duration-300"
                 >
-                  <div className="absolute inset-0 gold-gradient transform translate-y-full group-hover:translate-y-0 transition-transform duration-300" />
-                  <div className="relative bg-[var(--gold)] group-hover:bg-transparent text-white text-center py-5 px-8 text-sm tracking-[0.2em] uppercase transition-colors duration-300">
+                  <div className="text-gray-800 group-hover:text-[var(--gold)] text-center py-5 px-8 text-sm tracking-[0.2em] uppercase transition-colors duration-300">
                     Programează-te cu Notino
                   </div>
                 </button>
 
                 <button
                   onClick={handlePhoneClick}
-                  className="group relative block w-full overflow-hidden border-2 border-[var(--gold)]/40 hover:border-[var(--gold)] transition-colors duration-300"
+                  className="group relative block w-full overflow-hidden border-2 border-gray-200 hover:border-[var(--gold)] transition-colors duration-300"
                 >
                   <div className="text-gray-800 group-hover:text-[var(--gold)] text-center py-5 px-8 text-sm tracking-[0.2em] uppercase transition-colors duration-300">
                     {showPhoneNumber ? phoneNumber : "Sună Acum"}
                   </div>
                 </button>
-                
-                <WhatsAppBookingButton />
               </div>
             </div>
           </motion.div>

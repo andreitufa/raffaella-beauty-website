@@ -91,45 +91,6 @@ export function EpilareDefinitiva() {
     }
   ];
 
-  const barbatiItems: PricingItem[] = [
-    {
-      name: "Contur Barbă",
-      price: "200"
-    },
-    {
-      name: "Axilă",
-      price: "130"
-    },
-    {
-      name: "Piept + Umeri",
-      price: "150"
-    },
-    {
-      name: "Brațe Lung",
-      price: "180"
-    },
-    {
-      name: "Spate",
-      price: "280"
-    },
-    {
-      name: "Abdomen",
-      price: "150"
-    },
-    {
-      name: "Picioare Integral",
-      price: "280"
-    },
-    {
-      name: "Coapse",
-      price: "180"
-    },
-    {
-      name: "Gambe",
-      price: "180"
-    }
-  ];
-
   const PricingCard = ({ item, index }: { item: PricingItem; index: number }) => (
     <motion.div
       initial={{ opacity: 0, y: 20 }}
@@ -167,15 +128,15 @@ export function EpilareDefinitiva() {
     <div className="min-h-screen bg-white">
       <SEO
         title="Epilare Definitivă Infinity Laser Pro - Prețuri București"
-        description="Epilare definitivă cu laser Infinity Laser Pro în București, pentru femei și bărbați. Prețuri de la 80 RON pe zonă, Full Body 450 RON. Vezi lista completă de prețuri. Programări: 0765 315 537"
-        keywords="epilare definitiva bucuresti, epilare laser bucuresti, infinity laser pro, epilare definitiva pret, epilare definitiva barbati bucuresti"
+        description="Epilare definitivă cu laser Infinity Laser Pro în București. Prețuri de la 80 RON pe zonă, Full Body 450 RON. Vezi lista completă de prețuri. Programare WhatsApp."
+        keywords="epilare definitiva bucuresti, epilare laser bucuresti, infinity laser pro, epilare definitiva pret"
         canonical="/preturi/epilare-definitiva"
       />
       <StructuredData
         type="Service"
         service={{
           name: "Epilare Definitivă Infinity Laser Pro",
-          description: "Epilare definitivă cu tehnologie laser de ultimă generație Infinity Laser Pro, pentru femei și bărbați",
+          description: "Epilare definitivă cu tehnologie laser de ultimă generație Infinity Laser Pro",
           priceRange: "80-450 RON"
         }}
       />
@@ -262,48 +223,27 @@ export function EpilareDefinitiva() {
           <div className="absolute -bottom-4 -left-4 w-24 h-24 border-b border-l border-[var(--gold)]/30" />
         </motion.div>
 
-        {/* Pricing Sections */}
-        <div className="grid md:grid-cols-2 gap-12 md:gap-16">
-          {/* FEMEI Section */}
-          <motion.div
-            initial={{ opacity: 0, x: -40 }}
-            animate={{ opacity: 1, x: 0 }}
-            transition={{ duration: 0.8, delay: 0.4 }}
-          >
-            <div className="text-center mb-8">
-              <h2 className="elegant-title text-3xl mb-4 text-gray-900">
-                Femei
-              </h2>
-              <div className="w-16 h-px bg-[var(--gold)] mx-auto" />
-            </div>
-            <div className="space-y-4">
-              {femeiItems.map((item, index) => (
-                <PricingCard key={index} item={item} index={index} />
-              ))}
-            </div>
-          </motion.div>
+        {/* Pricing — femei (secțiunea bărbați e pe /epilare-barbati, nelistată) */}
+        <motion.div
+          initial={{ opacity: 0, y: 24 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.8, delay: 0.4 }}
+          className="max-w-xl mx-auto"
+        >
+          <div className="text-center mb-8">
+            <h2 className="elegant-title text-3xl mb-4 text-gray-900">
+              Prețuri
+            </h2>
+            <div className="w-16 h-px bg-[var(--gold)] mx-auto" />
+          </div>
+          <div className="space-y-4">
+            {femeiItems.map((item, index) => (
+              <PricingCard key={index} item={item} index={index} />
+            ))}
+          </div>
+        </motion.div>
 
-          {/* BARBATI Section */}
-          <motion.div
-            initial={{ opacity: 0, x: 40 }}
-            animate={{ opacity: 1, x: 0 }}
-            transition={{ duration: 0.8, delay: 0.4 }}
-          >
-            <div className="text-center mb-8">
-              <h2 className="elegant-title text-3xl mb-4 text-gray-900">
-                Bărbați
-              </h2>
-              <div className="w-16 h-px bg-[var(--gold)] mx-auto" />
-            </div>
-            <div className="space-y-4">
-              {barbatiItems.map((item, index) => (
-                <PricingCard key={index} item={item} index={index} />
-              ))}
-            </div>
-          </motion.div>
-        </div>
-
-        {/* CTA Section */}
+        {/* CTA Section — WhatsApp primar, Notino outline */}
         <motion.div
           initial={{ opacity: 0, y: 40 }}
           animate={{ opacity: 1, y: 0 }}
@@ -315,6 +255,7 @@ export function EpilareDefinitiva() {
             Programează-te acum pentru o experiență de înfrumusețare de excepție
           </p>
           <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
+            <WhatsAppServiceButton service="Epilare Definitivă" />
             <a
               href="https://www.notino.ro/saloane/raffaella-beauty-studio/"
               target="_blank"
@@ -326,18 +267,17 @@ export function EpilareDefinitiva() {
             >
               Programează-te Acum
             </a>
-            <WhatsAppServiceButton service="Epilare Definitivă" />
           </div>
         </motion.div>
       </div>
 
       <ServiceFaq
-        intro="Epilarea definitivă la Raffaella Beauty Studio se realizează cu aparatul Infinity cu triplu laser — Diodă, Alexandrite și Nd:YAG — complet nedureros, potrivit pentru femei și bărbați și pentru toate tipurile de piele. Salonul se află în Sectorul 2, București, iar prețurile pornesc de la 80 RON pe zonă."
+        intro="Epilarea definitivă la Raffaella Beauty Studio se realizează cu aparatul Infinity cu triplu laser — Diodă, Alexandrite și Nd:YAG — complet nedureros, pentru toate tipurile de piele. Salonul se află în Sectorul 2, București, iar prețurile pornesc de la 80 RON pe zonă."
         faqs={[
           {
             question: "Cât costă epilarea definitivă în București, la Raffaella Beauty Studio?",
             answer:
-              "Prețurile pentru femei pornesc de la 80 RON pe zonă (mustață, bărbie, linie bikini) și ajung la 450 RON pentru pachetul Full Body, care include axilă, inghinal total, picioare lung, interfesieri, brațe lung și degete. Pentru bărbați, prețurile sunt între 130 RON (axilă) și 280 RON (spate sau picioare integral).",
+              "Prețurile pornesc de la 80 RON pe zonă (mustață, bărbie, linie bikini) și ajung la 450 RON pentru pachetul Full Body, care include axilă, inghinal total, picioare lung, interfesieri, brațe lung și degete.",
           },
           {
             question: "Ce aparat se folosește pentru epilarea definitivă?",
@@ -357,12 +297,12 @@ export function EpilareDefinitiva() {
           {
             question: "Fac și bărbații epilare definitivă la Raffaella Beauty?",
             answer:
-              "Da. Avem o listă de prețuri dedicată bărbaților, cu zone precum contur barbă (200 RON), piept și umeri (150 RON), spate (280 RON), abdomen (150 RON) sau picioare integral (280 RON).",
+              "Pentru domni lucrăm pe bază de recomandare. Dacă ai primit o recomandare, scrie-ne pe WhatsApp.",
           },
           {
             question: "Cum mă programez la epilare definitivă?",
             answer:
-              "Programările se fac telefonic la 0765 315 537 sau online prin platforma Notino. Salonul este deschis de luni până vineri între 09:00 și 19:00, iar sâmbăta între 09:00 și 15:00.",
+              "Cel mai simplu pe WhatsApp sau telefonic la 0765 315 537. Poți folosi și platforma Notino. Salonul este deschis de luni până vineri între 09:00 și 19:00, iar sâmbăta între 09:00 și 15:00.",
           },
         ]}
       />

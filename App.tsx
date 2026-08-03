@@ -52,6 +52,7 @@ const ANPC = lazyPage(() => import("./pages/ANPC"), "ANPC");
 const SolutionareLitigii = lazyPage(() => import("./pages/SolutionareLitigii"), "SolutionareLitigii");
 const NotFound = lazyPage(() => import("./pages/NotFound"), "NotFound");
 const EpilareSector2 = lazyPage(() => import("./pages/EpilareSector2"), "EpilareSector2");
+const EpilareBarbati = lazyPage(() => import("./pages/EpilareBarbati"), "EpilareBarbati");
 const Blog = lazyPage(() => import("./pages/blog/Blog"), "Blog");
 const BlogPost = lazyPage(() => import("./pages/blog/BlogPost"), "BlogPost");
 
@@ -76,9 +77,21 @@ function ScrollToTop() {
 
 function AppLayout() {
   const location = useLocation();
-  const isPricingPage = location.pathname.startsWith('/preturi/');
-  const isStandalonePage = location.pathname.startsWith('/blog') || location.pathname === '/epilare-definitiva-sector-2';
-  const isLegalPage = ['/termeni-conditii', '/politica-confidentialitate', '/anpc', '/solutionare-litigii', '/contact'].includes(location.pathname);
+  // Vite/browser pot servi ruta cu trailing slash (/path/) — egalitatea strictă
+  // eșuează și clientul randează Navigation peste HTML prerendered fără nav → hydration #418/#423.
+  const path = location.pathname.replace(/\/+$/, "") || "/";
+  const isPricingPage = path.startsWith("/preturi/");
+  const isStandalonePage =
+    path.startsWith("/blog") ||
+    path === "/epilare-definitiva-sector-2" ||
+    path === "/epilare-barbati";
+  const isLegalPage = [
+    "/termeni-conditii",
+    "/politica-confidentialitate",
+    "/anpc",
+    "/solutionare-litigii",
+    "/contact",
+  ].includes(path);
 
   return (
     <>
@@ -97,6 +110,7 @@ function AppLayout() {
         <Route path="/solutionare-litigii" element={<SolutionareLitigii />} />
         <Route path="/contact" element={<ContactPage />} />
         <Route path="/epilare-definitiva-sector-2" element={<EpilareSector2 />} />
+        <Route path="/epilare-barbati" element={<EpilareBarbati />} />
         <Route path="/blog" element={<Blog />} />
         <Route path="/blog/:slug" element={<BlogPost />} />
           {/* Pagină 404 reală (noindex) în loc de duplicat al homepage-ului */}

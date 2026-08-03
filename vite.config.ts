@@ -1,5 +1,10 @@
 import { defineConfig } from 'vite'
 import react from '@vitejs/plugin-react'
+import fs from 'node:fs'
+import path from 'node:path'
+import { fileURLToPath } from 'node:url'
+
+const rootDir = path.dirname(fileURLToPath(import.meta.url))
 
 function figmaAssetPlugin() {
   return {
@@ -32,9 +37,39 @@ function unversionedImportAlias() {
   }
 }
 
+/** Servește dist/<ruta>/index.html și pentru /ruta (fără slash) — altfel SPA fallback
+ *  livra homepage-ul și provoca hydration mismatch în `vite preview`. */
+function servePrerenderedPages() {
+  return {
+    name: 'serve-prerendered-pages',
+    configurePreviewServer(server: { middlewares: { use: (fn: unknown) => void } }) {
+      const distDir = path.resolve(rootDir, 'dist')
+      server.middlewares.use((
+        req: { method?: string; url?: string },
+        res: { setHeader: (k: string, v: string) => void; end: (b: Buffer) => void },
+        next: () => void,
+      ) => {
+        if (req.method !== 'GET' && req.method !== 'HEAD') return next()
+        const raw = (req.url ?? '').split('?')[0] ?? ''
+        if (!raw || raw === '/' || path.extname(raw)) return next()
+        const clean = raw.replace(/\/+$/, '')
+        const indexFile = path.join(distDir, clean.slice(1), 'index.html')
+        if (fs.existsSync(indexFile)) {
+          res.setHeader('Content-Type', 'text/html; charset=utf-8')
+          res.end(fs.readFileSync(indexFile))
+          return
+        }
+        next()
+      })
+    },
+  }
+}
+
 // https://vitejs.dev/config/
 export default defineConfig({
-  plugins: [react(), figmaAssetPlugin(), unversionedImportAlias()],
+  plugins: [react(), figmaAssetPlugin(), unversionedImportAlias(), servePrerenderedPages()],
+  // Fără SPA fallback pe rute necunoscute (altfel /ruta fără HTML propriu primea homepage-ul).
+  appType: 'mpa',
   ssr: {
     // pachete CJS care trebuie incluse în bundle-ul de prerendering
     // (importul lor direct din Node ESM eșuează la named exports)
@@ -48,4 +83,3 @@ export default defineConfig({
     outDir: 'dist'
   }
 })
-
