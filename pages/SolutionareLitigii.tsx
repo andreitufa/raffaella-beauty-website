@@ -60,7 +60,7 @@ export function SolutionareLitigii() {
                 <p><strong>📞 Telefon:</strong> +40 765 315 537</p>
                 <p><strong>💬 WhatsApp:</strong> +40 765 315 537</p>
                 <p><strong>📧 Email reclamații:</strong> raffaellabeauty@yahoo.com</p>
-                <p><strong>📍 Adresa:</strong> Strada Vaselor nr. 56 ap 2, București (intrare din Str. Aprodul Purice)</p>
+                <p><strong>📍 Adresa:</strong> Strada Locotenent Sachelarie Visarion nr. 59, Sector 2, București</p>
                 <p><strong>⏰ Program:</strong> Luni-Vineri 09:00-19:00, Sâmbătă 09:00-15:00</p>
               </div>
             </div>

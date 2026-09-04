@@ -33,7 +33,7 @@ export function EpilareSector2() {
     <div className="min-h-screen bg-white">
       <SEO
         title="Epilare Definitivă Sector 2 București - Fără Durere | Raffaella Beauty"
-        description="Epilare definitivă fără durere în Sectorul 2, București — zona Iancului, Obor, Pantelimon. Triplu laser Infinity (Diodă + Alexandrite + Nd:YAG). Prețuri de la 80 RON. Programare WhatsApp."
+        description="Epilare definitivă fără durere în Sectorul 2, București — zona Pantelimon, Iancului, Obor. Triplu laser Infinity (Diodă + Alexandrite + Nd:YAG). Prețuri de la 80 RON. Programare WhatsApp."
         keywords="epilare definitiva sector 2, epilare laser sector 2 bucuresti, epilare definitiva fara durere, epilare definitiva iancului, epilare definitiva obor, epilare definitiva pantelimon, triplu laser bucuresti"
         canonical="/epilare-definitiva-sector-2"
       />
@@ -41,7 +41,7 @@ export function EpilareSector2() {
         type="Service"
         service={{
           name: "Epilare Definitivă Sector 2 București",
-          description: "Epilare definitivă fără durere cu triplu laser Infinity (Diodă, Alexandrite, Nd:YAG) în Sectorul 2, București — zona Iancului, Obor, Pantelimon.",
+          description: "Epilare definitivă fără durere cu triplu laser Infinity (Diodă, Alexandrite, Nd:YAG) în Sectorul 2, București — zona Pantelimon, Iancului, Obor.",
           priceRange: "80-450 RON",
         }}
       />
@@ -66,7 +66,7 @@ export function EpilareSector2() {
           </h1>
           <div className="w-24 h-px bg-[var(--gold)] mx-auto mb-5" />
           <p className="text-gray-600 text-base md:text-lg leading-relaxed max-w-3xl mx-auto mb-6" style={{ fontWeight: 300 }}>
-            Raffaella Beauty Studio — epilare definitivă fără durere în zona Iancului–Obor,
+            Raffaella Beauty Studio — epilare definitivă fără durere în zona Pantelimon–Iancului,
             cu Infinity triplu laser (Diodă, Alexandrite, Nd:YAG).
           </p>
           <div className="flex flex-col items-center gap-2">
@@ -161,7 +161,7 @@ export function EpilareSector2() {
           </h2>
           <div className="w-16 h-px bg-[var(--gold)] mx-auto mb-8" />
           <p className="text-gray-600 mb-8" style={{ fontWeight: 300 }}>
-            Salonul se află în zona Iancului–Obor, cu acces rapid din cartierele:
+            Salonul se află pe Strada Locotenent Sachelarie Visarion nr. 59, în zona Pantelimon–Iancului, cu acces rapid din cartierele:
           </p>
           <div className="flex flex-wrap justify-center gap-3">
             {zone.map((z) => (
@@ -243,7 +243,7 @@ export function EpilareSector2() {
           {
             question: "Unde pot face epilare definitivă în Sectorul 2, București?",
             answer:
-              "La Raffaella Beauty Studio, salon de înfrumusețare premium din Sectorul 2, zona Iancului–Obor. Suntem la câteva minute de Piața Iancului, Obor, Pantelimon și Vatra Luminoasă, cu acces facil cu metroul (M1) și transportul public. Programări pe WhatsApp sau telefonic la 0765 315 537.",
+              "La Raffaella Beauty Studio, salon de înfrumusețare premium din Sectorul 2, pe Strada Locotenent Sachelarie Visarion nr. 59, zona Pantelimon–Iancului. Suntem la câteva minute de Șoseaua Pantelimon, Piața Iancului și Piața Delfinului, cu acces facil cu metroul (M1 Iancului) și transportul public. Programări pe WhatsApp sau telefonic la 0765 315 537.",
           },
           {
             question: "Chiar nu doare epilarea definitivă cu triplu laser?",

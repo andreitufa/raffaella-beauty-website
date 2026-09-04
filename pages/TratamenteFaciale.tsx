@@ -75,7 +75,7 @@ export function TratamenteFaciale() {
         items={pricingItems}
       />
       <ServiceFaq
-        intro="Tratamentele faciale la Raffaella Beauty Studio se realizează cu aparatul Oxigenera Pro, care oxigenează, hidratează și revitalizează tenul. O ședință durează 60-90 de minute, iar prețurile sunt între 250 și 400 RON, la salonul de pe Strada Vaselor nr. 56, București."
+        intro="Tratamentele faciale la Raffaella Beauty Studio se realizează cu aparatul Oxigenera Pro, care oxigenează, hidratează și revitalizează tenul. O ședință durează 60-90 de minute, iar prețurile sunt între 250 și 400 RON, la salonul de pe Strada Locotenent Sachelarie Visarion nr. 59, Sector 2, București."
         faqs={[
           {
             question: "Cât costă un tratament facial la Raffaella Beauty Studio?",

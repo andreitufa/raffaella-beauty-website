@@ -39,13 +39,10 @@ export function Footer() {
                 className="text-gray-500 hover:text-[var(--gold)] transition-colors text-sm block"
                 style={{ fontWeight: 300 }}
               >
-                Strada Vaselor nr. 56 ap 2
+                Strada Locotenent Sachelarie Visarion nr. 59
               </a>
               <p className="text-gray-500 text-sm" style={{ fontWeight: 300 }}>
-                (intrare din Str. Aprodul Purice)
-              </p>
-              <p className="text-gray-500 text-sm" style={{ fontWeight: 300 }}>
-                București, România
+                Sector 2, București, România
               </p>
             </div>
             

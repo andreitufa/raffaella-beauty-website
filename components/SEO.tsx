@@ -66,10 +66,10 @@ export function SEO({
       <meta name="ICBM" content="44.4268, 26.1025" />
       
       {/* Business Information */}
-      <meta name="business.contact_data.street_address" content="Strada Vaselor nr. 56 ap 2" />
+      <meta name="business.contact_data.street_address" content="Strada Locotenent Sachelarie Visarion nr. 59" />
       <meta name="business.contact_data.locality" content="București" />
       <meta name="business.contact_data.region" content="București" />
-      <meta name="business.contact_data.postal_code" content="020257" />
+      <meta name="business.contact_data.postal_code" content="021705" />
       <meta name="business.contact_data.country_name" content="România" />
       <meta name="business.contact_data.phone_number" content="+40765315537" />
       <meta name="business.contact_data.email" content="raffaellabeauty@yahoo.com" />

@@ -142,7 +142,7 @@ function HomePage() {
           {
             question: "Unde se află salonul Raffaella Beauty Studio?",
             answer:
-              "Salonul se află în București, pe Strada Vaselor nr. 56, ap. 2, sector 2 (cod poștal 020257), aproape de zona Iancului. Ne găsești ușor cu transportul public sau cu mașina.",
+              "Salonul se află în București, pe Strada Locotenent Sachelarie Visarion nr. 59, Sector 2 (cod poștal 021705), în zona Pantelimon–Iancului. Ne găsești ușor cu transportul public sau cu mașina.",
           },
           {
             question: "Ce servicii oferă Raffaella Beauty Studio?",
@@ -175,7 +175,7 @@ function ContactPage() {
     <div className="min-h-screen bg-white pt-0">
       <SEO
         title="Contact și Programări - Salon București"
-        description="Contactează Raffaella Beauty Studio: Strada Vaselor nr. 56, București. Telefon 0765 315 537. Program: L-V 09:00-19:00, S 09:00-15:00. Programări online prin Notino."
+        description="Contactează Raffaella Beauty Studio: Strada Locotenent Sachelarie Visarion nr. 59, Sector 2, București. Telefon 0765 315 537. Program: L-V 09:00-19:00, S 09:00-15:00. Programări online prin Notino."
         keywords="contact raffaella beauty, programare salon bucuresti, salon strada vaselor, salon sector 2 bucuresti"
         canonical="/contact"
       />

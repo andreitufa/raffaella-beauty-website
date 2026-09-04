@@ -58,7 +58,7 @@ export function PoliticaConfidentialitate() {
               <p><strong>Denumire:</strong> SC RAFFAELLA BEAUTY STUDIO SRL</p>
               <p><strong>CUI:</strong> 38209960</p>
               <p><strong>Nr. Registrul Comerțului:</strong> J40/15707/12.09.2017</p>
-              <p><strong>Adresa:</strong> Strada Vaselor nr. 56 ap 2, București, România</p>
+              <p><strong>Adresa:</strong> Strada Locotenent Sachelarie Visarion nr. 59, Sector 2, București, România</p>
               <p><strong>Email:</strong> raffaellabeauty@yahoo.com</p>
               <p><strong>Telefon:</strong> +40 765 315 537</p>
             </div>
@@ -179,7 +179,7 @@ export function PoliticaConfidentialitate() {
               <p><strong>Email:</strong> raffaellabeauty@yahoo.com</p>
               <p><strong>Telefon:</strong> +40 765 315 537</p>
               <p><strong>WhatsApp:</strong> +40 765 315 537</p>
-              <p><strong>Adresa:</strong> Strada Vaselor nr. 56 ap 2, București (intrare din Str. Aprodul Purice)</p>
+              <p><strong>Adresa:</strong> Strada Locotenent Sachelarie Visarion nr. 59, Sector 2, București</p>
             </div>
             <p className="text-gray-600 mt-4" style={{ fontWeight: 300, lineHeight: 1.8 }}>
               Vom răspunde solicitării dumneavoastră în termen de maximum 30 de zile calendaristice de la primirea cererii.

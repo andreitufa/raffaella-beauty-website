@@ -93,9 +93,8 @@ export function Contact() {
                     className="text-gray-600 hover:text-[var(--gold)] transition-colors leading-relaxed cursor-pointer block"
                     style={{ fontWeight: 300 }}
                   >
-                    Strada Vaselor nr. 56 ap 2<br />
-                    (intrare din Str. Aprodul Purice)<br />
-                    București, România
+                    Strada Locotenent Sachelarie Visarion nr. 59<br />
+                    Sector 2, București, România
                   </a>
                 </div>
               </div>

@@ -58,7 +58,7 @@ export function ScanareTen() {
         imageContain={true}
       />
       <ServiceFaq
-        intro="Scanarea tenului la Raffaella Beauty Studio se face cu aparatul Skin Doctor, care analizează în profunzime starea pielii: hidratare, sebum, pori, riduri și pete pigmentare. Ședința durează 30 de minute și costă 100 RON, la salonul de pe Strada Vaselor nr. 56, București."
+        intro="Scanarea tenului la Raffaella Beauty Studio se face cu aparatul Skin Doctor, care analizează în profunzime starea pielii: hidratare, sebum, pori, riduri și pete pigmentare. Ședința durează 30 de minute și costă 100 RON, la salonul de pe Strada Locotenent Sachelarie Visarion nr. 59, Sector 2, București."
         faqs={[
           {
             question: "Cât costă o scanare a tenului în București?",

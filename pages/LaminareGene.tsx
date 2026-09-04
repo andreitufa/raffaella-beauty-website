@@ -65,7 +65,7 @@ export function LaminareGene() {
         items={pricingItems}
       />
       <ServiceFaq
-        intro="Laminarea de gene și sprâncene la Raffaella Beauty Studio oferă un aspect îngrijit și natural, fără extensii, cu rezultate care durează în medie 6-8 săptămâni. O ședință durează aproximativ o oră și jumătate, la salonul de pe Strada Vaselor nr. 56, București."
+        intro="Laminarea de gene și sprâncene la Raffaella Beauty Studio oferă un aspect îngrijit și natural, fără extensii, cu rezultate care durează în medie 6-8 săptămâni. O ședință durează aproximativ o oră și jumătate, la salonul de pe Strada Locotenent Sachelarie Visarion nr. 59, Sector 2, București."
         faqs={[
           {
             question: "Cât costă laminarea de gene sau sprâncene în București?",

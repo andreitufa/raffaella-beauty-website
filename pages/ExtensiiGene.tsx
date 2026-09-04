@@ -121,7 +121,7 @@ export function ExtensiiGene() {
         items={pricingItems}
       />
       <ServiceFaq
-        intro="Extensiile de gene la Raffaella Beauty Studio sunt aplicate fir cu fir, cu materiale premium, în tehnici de la efectul natural 1D-2D până la volum intens 6D, Wet Look sau Solisse. Salonul se află pe Strada Vaselor nr. 56, București, iar aplicarea durează aproximativ 2 ore."
+        intro="Extensiile de gene la Raffaella Beauty Studio sunt aplicate fir cu fir, cu materiale premium, în tehnici de la efectul natural 1D-2D până la volum intens 6D, Wet Look sau Solisse. Salonul se află pe Strada Locotenent Sachelarie Visarion nr. 59, Sector 2, București, iar aplicarea durează aproximativ 2 ore."
         faqs={[
           {
             question: "Cât costă extensiile de gene în București, la Raffaella Beauty Studio?",

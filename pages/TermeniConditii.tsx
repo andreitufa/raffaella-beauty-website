@@ -47,7 +47,7 @@ export function TermeniConditii() {
               <p><strong>CUI:</strong> 38209960</p>
               <p><strong>Nr. Registrul Comerțului:</strong> J40/15707/12.09.2017</p>
               <p><strong>Capital social:</strong> 200 lei</p>
-              <p><strong>Adresa:</strong> Strada Vaselor nr. 56 ap 2, București (intrare din Str. Aprodul Purice)</p>
+              <p><strong>Adresa:</strong> Strada Locotenent Sachelarie Visarion nr. 59, Sector 2, București</p>
               <p><strong>Telefon:</strong> +40 765 315 537</p>
               <p><strong>Email:</strong> raffaellabeauty@yahoo.com</p>
             </div>
@@ -197,7 +197,7 @@ export function TermeniConditii() {
               <p><strong>Telefon:</strong> +40 765 315 537</p>
               <p><strong>WhatsApp:</strong> +40 765 315 537</p>
               <p><strong>Email:</strong> raffaellabeauty@yahoo.com</p>
-              <p><strong>Adresa:</strong> Strada Vaselor nr. 56 ap 2, București (intrare din Str. Aprodul Purice)</p>
+              <p><strong>Adresa:</strong> Strada Locotenent Sachelarie Visarion nr. 59, Sector 2, București</p>
             </div>
           </section>
 

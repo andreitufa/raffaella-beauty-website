@@ -28,16 +28,16 @@ export function StructuredData({ type, service, breadcrumbs }: StructuredDataPro
     email: "raffaellabeauty@yahoo.com",
     address: {
       "@type": "PostalAddress",
-      streetAddress: "Strada Vaselor nr. 56 ap 2",
+      streetAddress: "Strada Locotenent Sachelarie Visarion nr. 59",
       addressLocality: "București",
       addressRegion: "București",
-      postalCode: "020257",
+      postalCode: "021705",
       addressCountry: "RO"
     },
     geo: {
       "@type": "GeoCoordinates",
-      latitude: 44.4268,
-      longitude: 26.1025
+      latitude: 44.443109,
+      longitude: 26.138577
     },
     openingHoursSpecification: [
       {
@@ -126,7 +126,7 @@ export function StructuredData({ type, service, breadcrumbs }: StructuredDataPro
         telephone: "+40765315537",
         address: {
           "@type": "PostalAddress",
-          streetAddress: "Strada Vaselor nr. 56 ap 2",
+          streetAddress: "Strada Locotenent Sachelarie Visarion nr. 59",
           addressLocality: "București",
           addressCountry: "RO"
         }
