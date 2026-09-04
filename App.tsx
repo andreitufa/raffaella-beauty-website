@@ -157,7 +157,7 @@ function HomePage() {
           {
             question: "Cum fac o programare?",
             answer:
-              "Telefonic la 0765 315 537 sau online prin platforma Notino, unde vezi în timp real intervalele disponibile. Poți scrie și pe Instagram la @raffaella__beauty.",
+              "Cel mai simplu e pe WhatsApp, la 0765 315 537 — apasă butonul verde de WhatsApp de pe site și mesajul se completează automat, iar noi îți răspundem rapid cu intervalele libere. Ne poți suna la același număr, te poți programa online prin Notino sau ne poți scrie pe Instagram la @raffaella__beauty.",
           },
           {
             question: "Cum se plătesc serviciile?",
@@ -175,8 +175,8 @@ function ContactPage() {
     <div className="min-h-screen bg-white pt-0">
       <SEO
         title="Contact și Programări - Salon București"
-        description="Contactează Raffaella Beauty Studio: Strada Locotenent Sachelarie Visarion nr. 59, Sector 2, București. Telefon 0765 315 537. Program: L-V 09:00-19:00, S 09:00-15:00. Programări online prin Notino."
-        keywords="contact raffaella beauty, programare salon bucuresti, salon strada vaselor, salon sector 2 bucuresti"
+        description="Contactează Raffaella Beauty Studio: Strada Locotenent Sachelarie Visarion nr. 59, Sector 2, București. Telefon 0765 315 537. Program: L-V 09:00-19:00, S 09:00-15:00. Programări rapide pe WhatsApp sau online prin Notino."
+        keywords="contact raffaella beauty, programare salon bucuresti, salon piata iancului, salon sector 2 bucuresti"
         canonical="/contact"
       />
       <StructuredData
