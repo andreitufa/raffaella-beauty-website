@@ -1,0 +1,68 @@
+---
+description: Memorie Raffaella Beauty (salonul soției) — istoric Google Ads + site + REGULĂ de jurnalizare. Citește OBLIGATORIU când userul cere optimizare Google Ads, modificări pe site-ul salonului, sau întreabă ce s-a făcut până acum la reclame/salon.
+alwaysApply: true
+---
+
+# Memorie: Raffaella Beauty — Google Ads & Site
+
+## REGULĂ PERMANENTĂ: jurnalizează TOT
+După ORICE modificare la site, campania Google Ads, Google Business Profile sau orice altceva legat de salon:
+1. Adaugă o intrare datată în „Jurnal modificări" de mai jos (cea mai recentă sus).
+2. Sincronizează AMBELE copii ale acestui fișier (conținut identic, doar `alwaysApply` diferă):
+   - `/Users/andrei/Desktop/LuxBid Project 2/.cursor/rules/raffaella-beauty-ads.mdc` (alwaysApply: false)
+   - `/Users/andrei/Desktop/Website Raffaella Beauty/.cursor/rules/raffaella-beauty-ads.mdc` (alwaysApply: true; e în git — commit + push după actualizare)
+3. Nu încheia sesiunea fără jurnalul actualizat.
+
+## Context business
+- Salonul soției: Raffaella Beauty Studio, Str. Locotenent Sachelarie Visarion nr. 59, Sector 2, București — zona **Piața Iancului** (mutat în sep 2026 de pe Str. Vaselor 56; userul a corectat explicit: zona se numește „Piața Iancului", NU „Pantelimon").
+- Site: raffaellabeauty.ro — cod local în `/Users/andrei/Desktop/Website Raffaella Beauty` (git → GitHub `andreitufa/raffaella-beauty-website` → Vercel auto-deploy la push pe main).
+- Telefon/WhatsApp: 0765 315 537. Programările dorite vin pe **WhatsApp** (trackabile); Notino NU e trackabil, userul nu mizează pe el.
+- Public țintă: femei 25–54, tot Bucureștiul + Voluntari, Pantelimon, Dobroești. Bărbați doar pe recomandare (`/epilare-barbati`, noindex).
+- Focus comercial: **pachetul Full Body 450 RON/ședință**. Zonele mici (mustață 80 RON etc.) nu sunt profitabile — lead-uri nedorite.
+
+## Google Ads (cont raffaellabeauty1@gmail.com, ocid 7799290201)
+- Campanie: „Epilare Definitivă - WhatsApp" (ID 24044565791, ad group 203655939052), Search, buget 35 RON/zi, status „Eligible (Limited)" — strategia de licitare e limitată de max CPC.
+- Conversii: „Contact" = click WhatsApp (`AW-17734809518` / label `PT9bCP6ivdIcEK7vzohC`, primary) și „Book appointment" = Notino (secundar). Click pe telefon NU are conversie încă (`GOOGLE_ADS_PHONE_CONVERSION_LABEL` e null în `components/GoogleAds.tsx`).
+
+## Jurnal modificări (cea mai recentă sus)
+
+### 4–5 sep 2026 — Optimizare majoră campanie + adresa nouă
+**Site (deploy-uit):** adresa nouă în ~12 fișiere (Contact, Footer, StructuredData cu coordonate noi, SEO, App, pagini servicii + legale), zona corectată în „Piața Iancului", FAQ programare rescris cu WhatsApp menționat primul.
+**Google Ads (toate verificate pe server):**
+1. Locații: tot Bucureștiul + Voluntari, Pantelimon, Dobroești; radius targets vechi șterse.
+2. Program anunțuri ajustat.
+3. „epilare definitiva pret" PAUZAT (199 RON cheltuiți, 0 conversii — atrăgea vânători de preț).
+4. Cuvinte noi: "epilare full body", "epilare definitiva full body" (phrase).
+5. Negative: **141 total** — orașe din afara Bucureștiului, competitori (bonnita, abbate…), "barbati" + zonele mici: mustata, barbie, perciuni, buza, axila, axile, inghinal, bikini, gambe, picioare, brate, maini, spate, abdomen, fata.
+6. Demografic: **EXCLUSE 18–24 și 65+** (toate conversiile veneau din 25–44). „Unknown" rămâne activ intenționat — aduce ~35% din trafic și 1 conversie; minorii nelogați intră aici, filtrare 100% imposibilă tehnic.
+7. RSA nou **full body ACTIV**: titluri „Epilare Full Body 450 RON", „Pachet Full Body Avantajos"…, path `/epilare/full-body`, descrieri cu „Servicii 18+". RSA vechi („De la 80 Lei/Ședință") **PAUZAT**.
+8. Sitelinks existente la nivel de campanie: Prețuri Epilare Laser, Doare Epilarea Laser?, Numărul de Ședințe, Contact & Program.
+**Refuzat explicit de user:** modificări pe site pentru strategia full-body (FAQ 18+, hero cu 450 RON) — anulate cu `git restore`.
+
+### ~2–3 sep 2026 — Conversie site & pagina bărbați
+- Hero: buton WhatsApp primar (verde, refolosește `openWhatsApp`/`trackWhatsAppConversion`), Notino outline secundar, „de la 80 RON / ședință".
+- Secțiune recenzii (5.0 Google, 8 recenzii) + cookie bar discret.
+- `/epilare-barbati` creat (noindex, „pe bază de recomandare"); secțiunea bărbați scoasă de pe paginile publice.
+- Ofertă de intrare: „Consultație + ședință de testare gratuite la prima vizită" (hero + CTA jos + FAQ „Cum decurge prima vizită?").
+- Reparate erorile de hidratare React (#418/#423) pe `/epilare-definitiva-sector-2` (prerender desincronizat).
+
+### ~6 aug 2026 — Lansare campanie
+- Campania „Epilare Definitivă - WhatsApp" pornită, buget 35 RON/zi, landing `/epilare-definitiva-sector-2`.
+
+## Metrici referință (6 aug – 4 sep 2026)
+438 click-uri, 4.967 afișări, CTR 8,83%, CPC mediu 2,36 RON, cost 1.033 RON, 5 conversii WhatsApp (CPA ~207 RON), 15 conversii totale (cu Notino). Impression share 26%. Concurență în creștere: doctorskin.ro (73% impr. share), dermepil.ro, ego-estetic.ro (nou), illumaclinique.ro (nou).
+
+## Lecții / calitate lead-uri
+- Lead-uri slabe primite pe WhatsApp: o minoră (16 ani), o cerere doar mustață (80 RON), un neprezentat → de aici pivotul pe full body + excluderi de vârstă + negative pe zone mici.
+- **Nu modifica site-ul fără cerere explicită a userului.**
+
+## De făcut data viitoare (discutate, neimplementate)
+- Acțiune de conversie „click telefon" + completare `GOOGLE_ADS_PHONE_CONVERSION_LABEL`.
+- Imagini în anunțuri (recomandare Google: +4,1% CTR estimat).
+- Reevaluare buget (35 RON/zi se consumă aproape integral) și limita max CPC.
+- După ~2 săptămâni: verificat dacă cererile de zone mici au scăzut; verificat Ad strength la RSA nou (era „Pending" la creare).
+
+## Note automatizare Google Ads UI (browser Cursor)
+- Click-urile sintetice (dispatchEvent) adesea NU deschid meniurile — folosește `browser_mouse_click_xy` cu screenshot proaspăt înainte (viewport 1920×1080 → screenshot 1024×587, scale ≈0,533) sau `browser_click` pe ref din snapshot.
+- Dialogul Google „Confirm it's you" poate bloca salvările fără eroare vizibilă (UI optimist!) — verifică persistența cu reload proaspăt al paginii; blocarea expiră/dispare după re-autentificarea userului.
+- Capcană: click pe pictograma de editare deschide uneori editorul de BUGET — dă Cancel imediat, nu salva.
