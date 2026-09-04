@@ -142,7 +142,7 @@ function HomePage() {
           {
             question: "Unde se află salonul Raffaella Beauty Studio?",
             answer:
-              "Salonul se află în București, pe Strada Locotenent Sachelarie Visarion nr. 59, Sector 2 (cod poștal 021705), în zona Pantelimon–Iancului. Ne găsești ușor cu transportul public sau cu mașina.",
+              "Salonul se află în București, pe Strada Locotenent Sachelarie Visarion nr. 59, Sector 2 (cod poștal 021705), în zona Piața Iancului. Ne găsești ușor cu transportul public sau cu mașina.",
           },
           {
             question: "Ce servicii oferă Raffaella Beauty Studio?",
