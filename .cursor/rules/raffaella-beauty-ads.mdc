@@ -26,6 +26,11 @@ După ORICE modificare la site, campania Google Ads, Google Business Profile sau
 
 ## Jurnal modificări (cea mai recentă sus)
 
+### 10 sep 2026 — Audit vizibilitate AI (doar investigație, zero modificări)
+- Întrebare user: „ne recomandă ChatGPT/alte AI-uri?" → **NU**. Test live Google AI Mode (logat pe contul salonului), query „cel mai bun salon epilare definitiva bucuresti sector 2": recomandă Doctor SKiN, Coquette, Iris Epil, Alexa Body Skin, DermEpil Universitate și **L'amour Beauty Studio (Șos. Iancului 46, Soprano Titanium)** drept opțiunea din „zona Iancului/Obor". Raffaella absent. „Ședința de testare gratuită" e creditată la Doctor SKiN.
+- Cauze: (1) raffaellabeauty.ro NU e pe pagina 1 Google nici pt „sector 2"; (2) GBP absent din pachetul local (8 recenzii vs 900+ la competitori, business nou); (3) amprentă web terță ≈ zero — doar registre de firme (care arată și adresa juridică VECHE: Doamna Ghica 8); (4) tehnic OK: robots.txt permite deja boții AI (GPTBot, ClaudeBot, PerplexityBot etc.), schema LocalBusiness există; llms.txt lipsește (404, minor).
+- Plan recomandat (neimplementat, așteaptă decizia userului): 1) recenzii Google 8→50+ (pârghia #1; automatizare WhatsApp post-programare — idee mai veche); 2) listări citabile de AI: MERO (Elegance e citat via MERO), firmadeaur.ro, directoare; consistență NAP (adresa veche în registre); 3) mențiuni terțe: advertoriale „top saloane", forumuri RO; 4) pe site: pagină-ghid comparativ „cum alegi salonul" (formatul cel mai citat de AI), llms.txt, verificat FAQPage schema; 5) așteptări: 2-3 luni pt query-uri de nișă (Piața Iancului), 6-12 luni pt „best of București".
+
 ### 5 sep 2026 — Decizie: ÎNGHEȚ 2 săptămâni (fără modificări)
 - User: 1.033 RON cheltuiți, nicio programare finalizată. Decizie comună: NU se mai optimizează nimic până pe **~18–19 sep 2026**, apoi review pe statistici.
 - Praguri la review: ≥1 programare finalizată → păstrăm/creștem buget; mesaje bune dar neînchise → problema e la vânzare pe WhatsApp, nu la ads; mesaje slabe/deloc → tăiem buget și regândim.
