@@ -26,6 +26,15 @@ După ORICE modificare la site, campania Google Ads, Google Business Profile sau
 
 ## Jurnal modificări (cea mai recentă sus)
 
+### 10 sep 2026 (seara) — Implementare AI SEO pe site (cu acordul explicit al userului)
+- Commit `83856c2`, push → deploy Vercel. Campania Google Ads NEATINSĂ (înghețul rămâne).
+- **Articol nou pe blog** (formatul #1 citat de AI): slug `cum-alegi-salonul-de-epilare-definitiva-bucuresti` — „Cum alegi salonul de epilare definitivă în București: ghid complet". 5 criterii, tabel comparativ tehnologii (IPL/Diodă/Alexandrite/Nd:YAG/triplu laser), red flags în recenzii, checklist întrebări, secțiune onestă „există cel mai bun salon?" + poziționare Raffaella (Piața Iancului, Infinity triplu laser, test gratuit, Full Body 450 RON, rating 5.0). 3 FAQ-uri cu răspunsuri self-contained. Inserat PRIMUL în `pages/blog/blogData.ts` (blogul listează în ordinea arrayului). Prerendered: 7.051 caractere text static — cea mai bogată pagină din site.
+- **`public/llms.txt` creat** (era 404): sumar business + prețuri cheie + toate paginile cu descrieri, format llmstxt.org.
+- **Prospețime**: `BUILD_REF` în `components/ServiceFaq.tsx` actualizat 2026-08-03 → 2026-09-10 („Informații și prețuri actualizate: septembrie 2026" pe toate paginile cu FAQ).
+- **`public/sitemap.xml`**: adăugat articolul nou (lastmod 2026-09-10) + bump lastmod `/blog`. **`scripts/prerender.mjs`**: adăugată ruta nouă.
+- Verificat: schema FAQPage există DEJA peste tot (ServiceFaq emite JSON-LD; folosit pe homepage + toate paginile servicii + blog). Schema Article + breadcrumbs pe articole. **Decis intenționat să NU adaug aggregateRating** în LocalBusiness (recenziile sunt de pe Google, nu de pe site — contra ghidurilor Google, risc penalizare).
+- Rămâne la user (nu se poate din cod): creștere recenzii Google (8→50+), listare MERO + directoare, advertoriale/mențiuni terțe.
+
 ### 10 sep 2026 — Audit vizibilitate AI (doar investigație, zero modificări)
 - Întrebare user: „ne recomandă ChatGPT/alte AI-uri?" → **NU**. Test live Google AI Mode (logat pe contul salonului), query „cel mai bun salon epilare definitiva bucuresti sector 2": recomandă Doctor SKiN, Coquette, Iris Epil, Alexa Body Skin, DermEpil Universitate și **L'amour Beauty Studio (Șos. Iancului 46, Soprano Titanium)** drept opțiunea din „zona Iancului/Obor". Raffaella absent. „Ședința de testare gratuită" e creditată la Doctor SKiN.
 - Cauze: (1) raffaellabeauty.ro NU e pe pagina 1 Google nici pt „sector 2"; (2) GBP absent din pachetul local (8 recenzii vs 900+ la competitori, business nou); (3) amprentă web terță ≈ zero — doar registre de firme (care arată și adresa juridică VECHE: Doamna Ghica 8); (4) tehnic OK: robots.txt permite deja boții AI (GPTBot, ClaudeBot, PerplexityBot etc.), schema LocalBusiness există; llms.txt lipsește (404, minor).
