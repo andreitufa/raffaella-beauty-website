@@ -1,0 +1,34 @@
+# Raffaella Beauty Studio
+
+> Salon de înfrumusețare premium în București, Sector 2, zona Piața Iancului (Strada Locotenent Sachelarie Visarion nr. 59, cod poștal 021705). Specializat în epilare definitivă cu triplu laser (aparat Infinity: Diodă 810 nm + Alexandrite 755 nm + Nd:YAG 1064 nm, cu răcire activă), extensii de gene, laminare gene și sprâncene, tratamente faciale Oxigenera Pro și scanare ten. Rating 5.0 pe Google.
+
+Informații esențiale:
+
+- Epilare definitivă: de la 80 RON pe zonă; pachet Full Body (femei) 450 RON pe ședință — include axilă, inghinal total, picioare, interfesieri, brațe și degete. Consultație și ședință de testare GRATUITE la prima vizită. Servicii pentru persoane adulte (18+).
+- Programări: WhatsApp / telefon 0765 315 537 (recomandat), online prin Notino sau Instagram @raffaella__beauty.
+- Program: Luni–Vineri 09:00–19:00, Sâmbătă 09:00–15:00, Duminică închis.
+- Toate paginile site-ului sunt servite ca HTML static complet (prerendering) — conținutul este integral citibil fără JavaScript.
+
+## Pagini principale
+
+- [Acasă](https://www.raffaellabeauty.ro/): prezentarea salonului, servicii, recenzii, întrebări frecvente
+- [Epilare definitivă — prețuri complete](https://www.raffaellabeauty.ro/preturi/epilare-definitiva): lista de prețuri pe zone, femei și bărbați
+- [Epilare definitivă în Sectorul 2](https://www.raffaellabeauty.ro/epilare-definitiva-sector-2): pagina dedicată zonei Piața Iancului / Sector 2, cu oferta pentru prima vizită
+- [Contact și programări](https://www.raffaellabeauty.ro/contact): adresă, hartă, program, date de contact
+- [Extensii gene — prețuri](https://www.raffaellabeauty.ro/preturi/extensii-gene): tehnici 1D–6D, Wet Look, Solisse
+- [Laminare gene și sprâncene — prețuri](https://www.raffaellabeauty.ro/preturi/laminare-gene)
+- [Tratamente faciale — prețuri](https://www.raffaellabeauty.ro/preturi/tratamente-faciale)
+- [Scanare ten — prețuri](https://www.raffaellabeauty.ro/preturi/scanare-ten)
+
+## Ghiduri (blog)
+
+- [Cum alegi salonul de epilare definitivă în București](https://www.raffaellabeauty.ro/blog/cum-alegi-salonul-de-epilare-definitiva-bucuresti): cele 5 criterii — tehnologie, test gratuit, prețuri transparente, recenzii, consult
+- [Cât costă epilarea definitivă în București în 2026](https://www.raffaellabeauty.ro/blog/cat-costa-epilarea-definitiva-bucuresti): ghid de prețuri pe zone
+- [Epilarea definitivă doare?](https://www.raffaellabeauty.ro/blog/epilarea-definitiva-doare): de ce triplul laser face tratamentul confortabil
+- [Câte ședințe de epilare definitivă sunt necesare?](https://www.raffaellabeauty.ro/blog/cate-sedinte-epilare-definitiva): ghid pe zone, 6–10 ședințe la 4–8 săptămâni
+- [Laminare sau extensii de gene?](https://www.raffaellabeauty.ro/blog/laminare-vs-extensii-gene): comparație completă
+
+## Opțional
+
+- [Termeni și condiții](https://www.raffaellabeauty.ro/termeni-conditii)
+- [Politica de confidențialitate](https://www.raffaellabeauty.ro/politica-confidentialitate)

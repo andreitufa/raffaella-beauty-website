@@ -19,7 +19,7 @@ const luniRo = [
 
 // Deterministică: aceeași valoare în prerender (Node) și în bundle-ul client.
 // Evită `new Date()` la încărcarea modulului (poate diferi între build și vizită).
-const BUILD_REF = new Date("2026-08-03T12:00:00Z");
+const BUILD_REF = new Date("2026-09-10T12:00:00Z");
 const dataActualizare = `${luniRo[BUILD_REF.getUTCMonth()]} ${BUILD_REF.getUTCFullYear()}`;
 
 export function ServiceFaq({ intro, faqs, title = "Întrebări frecvente" }: ServiceFaqProps) {

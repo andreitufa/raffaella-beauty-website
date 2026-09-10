@@ -22,6 +22,7 @@ const routes = [
   '/epilare-definitiva-sector-2',
   '/epilare-barbati',
   '/blog',
+  '/blog/cum-alegi-salonul-de-epilare-definitiva-bucuresti',
   '/blog/epilarea-definitiva-doare',
   '/blog/cat-costa-epilarea-definitiva-bucuresti',
   '/blog/cate-sedinte-epilare-definitiva',

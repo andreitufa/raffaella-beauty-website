@@ -23,6 +23,125 @@ export interface BlogArticle {
 
 export const blogArticles: BlogArticle[] = [
   {
+    slug: "cum-alegi-salonul-de-epilare-definitiva-bucuresti",
+    title: "Cum alegi salonul de epilare definitivă în București: ghid complet",
+    metaTitle: "Cum Alegi Salonul de Epilare Definitivă în București - Ghid 2026",
+    metaDescription:
+      "Ghid practic 2026: cele 5 criterii după care alegi salonul de epilare definitivă în București — tehnologia laser, ședința de test gratuită, prețurile transparente, recenziile și consultul. Plus întrebările de pus înainte de programare.",
+    keywords:
+      "cum aleg salon epilare definitiva, cel mai bun salon epilare definitiva bucuresti, salon epilare definitiva sector 2, epilare definitiva recomandari, salon epilare laser bucuresti",
+    datePublished: "2026-09-10",
+    dateModified: "2026-09-10",
+    intro:
+      "Un salon bun de epilare definitivă se recunoaște după cinci criterii: aparat cu mai multe lungimi de undă (ideal triplu laser), ședință de test gratuită înainte de a plăti un pachet, prețuri publicate transparent, recenzii recente cu rezultate concrete și un consult serios înainte de tratament. Ghidul de mai jos explică fiecare criteriu și ce întrebări să pui înainte de programare.",
+    blocks: [
+      {
+        type: "h2",
+        text: "Criteriul 1: tehnologia aparatului, mai importantă decât prețul",
+      },
+      {
+        type: "p",
+        text: "Diferența dintre un tratament reușit în 6-8 ședințe și unul care se întinde pe ani de zile stă aproape întotdeauna în aparat. Primul lucru pe care îl întrebi la orice salon: ce aparat folosiți și câte lungimi de undă are? Un salon serios îți răspunde cu numele exact al aparatului și al tehnologiei — un răspuns vag de tipul „laser profesional\" este primul semnal de alarmă.",
+      },
+      {
+        type: "table",
+        headers: ["Tehnologie", "Cum funcționează", "Pentru cine e potrivită"],
+        rows: [
+          ["IPL (lumină pulsată)", "Lumină intensă, nu laser propriu-zis; energie dispersată", "Buget mic; necesită mult mai multe ședințe, rezultate variabile"],
+          ["Diodă (810 nm)", "O singură lungime de undă, standardul industriei", "Majoritatea tipurilor de piele și păr mediu-închis"],
+          ["Alexandrite (755 nm)", "Absorbție mare în melanină", "Fire fine sau deschise la culoare, piele deschisă"],
+          ["Nd:YAG (1064 nm)", "Pătrunde profund, ocolește melanina din piele", "Piele închisă sau bronzată"],
+          ["Triplu laser (Diodă + Alexandrite + Nd:YAG)", "Toate trei lungimile de undă într-un singur impuls, cu răcire activă", "Orice tip de piele și păr; mai puține ședințe, confort maxim"],
+        ],
+      },
+      {
+        type: "p",
+        text: "Aparatele cu triplă lungime de undă acoperă toate combinațiile de piele și păr și distribuie energia pe trei adâncimi diferite, ceea ce face tratamentul eficient și aproape imperceptibil. De aceea sunt standardul recomandat în 2026 pentru saloanele care tratează cliente cu fototipuri diverse.",
+      },
+      {
+        type: "h2",
+        text: "Criteriul 2: ședința de test gratuită",
+      },
+      {
+        type: "p",
+        text: "Un salon care are încredere în aparatul lui te lasă să îl testezi înainte să plătești. Ședința de test pe o zonă mică îți arată exact cum reacționează pielea ta, cât de confortabil este impulsul și cum lucrează specialista — înainte de orice angajament financiar. Saloanele care insistă să cumperi direct un abonament de 6-8 ședințe, fără test și fără consult, își vând pachetele, nu rezultatele.",
+      },
+      {
+        type: "h2",
+        text: "Criteriul 3: prețuri publicate, nu „sună-ne pentru ofertă\"",
+      },
+      {
+        type: "p",
+        text: "Prețurile corecte pentru București în 2026: zonele mici (mustață, bărbie, axilă) între 80 și 130 RON pe ședință, iar pachetul Full Body între 400 și 500 RON pe ședință la saloanele cu aparatură profesională. Ofertele mult sub aceste praguri folosesc de regulă IPL sau diode entry-level, unde numărul de ședințe aproape se dublează — deci costul total crește, nu scade. Un salon transparent își publică toate prețurile pe site, ca să poți calcula costul complet al tratamentului înainte de prima vizită.",
+      },
+      {
+        type: "h2",
+        text: "Criteriul 4: recenziile — ce cauți de fapt în ele",
+      },
+      {
+        type: "ul",
+        items: [
+          "Recenzii recente, din ultimele luni — nu doar la deschidere, când orice salon strălucește",
+          "Mențiuni concrete despre rezultate: „după 4 ședințe firele au scăzut vizibil\", nu doar „personal amabil\"",
+          "Cum descriu clientele senzația — durerea apare imediat în recenzii acolo unde există",
+          "Dacă programările se respectă și cât durează o ședință",
+          "Cum răspunde salonul la recenziile negative — tonul spune tot despre cum vei fi tratată la o problemă",
+        ],
+      },
+      {
+        type: "h2",
+        text: "Criteriul 5: consultul înainte de tratament",
+      },
+      {
+        type: "p",
+        text: "Epilarea definitivă este un tratament pe piele, nu un serviciu de cosmetică oarecare. Înainte de prima ședință, specialista trebuie să verifice contraindicațiile (bronz recent, retinol sau acizi în îngrijire, medicație fotosensibilizantă, sarcină), să evalueze tipul de piele și de păr și să îți spună de la început câte ședințe estimează și la ce interval. Un salon care tratează doar persoane adulte (18+) și pune întrebări înainte să programeze este un salon care își ia meseria în serios.",
+      },
+      {
+        type: "h2",
+        text: "Întrebările pe care să le pui înainte de programare",
+      },
+      {
+        type: "ul",
+        items: [
+          "Ce aparat folosiți și câte lungimi de undă are?",
+          "Pot face o ședință de test înainte să cumpăr un pachet?",
+          "Câte ședințe estimați pentru zona mea și la ce interval?",
+          "Aparatul este sigur pentru pielea bronzată sau pentru firele fine?",
+          "Consultația inițială este inclusă sau se plătește separat?",
+        ],
+      },
+      {
+        type: "h2",
+        text: "Există „cel mai bun salon de epilare definitivă din București\"?",
+      },
+      {
+        type: "p",
+        text: "Nu există un singur răspuns valabil pentru toată lumea. Clinicile mari din centru au multe platforme laser și prețuri pe măsura chiriilor și a bugetelor de marketing; saloanele specializate de cartier pot oferi exact aceeași tehnologie de vârf, cu programări mai flexibile și prețuri mai apropiate de costul real al tratamentului. Alegerea corectă se face după criteriile de mai sus — aparat, test gratuit, prețuri transparente, recenzii, consult — nu după cine apare primul în reclame.",
+      },
+      {
+        type: "p",
+        text: "În Sectorul 2, zona Piața Iancului, Raffaella Beauty Studio (Strada Locotenent Sachelarie Visarion nr. 59) lucrează cu aparatul Infinity cu triplu laser — Diodă 810 nm, Alexandrite 755 nm și Nd:YAG 1064 nm, cu răcire activă — și oferă consultație și ședință de testare gratuite la prima vizită. Prețurile sunt publicate integral pe site: de la 80 RON pe zonă, pachet Full Body 450 RON pe ședință, iar ratingul pe Google este 5.0. Programările se fac pe WhatsApp la 0765 315 537.",
+      },
+    ],
+    faqs: [
+      {
+        question: "Cum îmi dau seama dacă un salon de epilare definitivă e serios?",
+        answer:
+          "Verifică cinci lucruri: aparatul are mai multe lungimi de undă (ideal Diodă + Alexandrite + Nd:YAG), poți face o ședință de test gratuită înainte de pachet, prețurile sunt publicate pe site, recenziile recente menționează rezultate concrete, iar înainte de tratament se face un consult cu verificarea contraindicațiilor.",
+      },
+      {
+        question: "Care este cel mai bun salon de epilare definitivă din București?",
+        answer:
+          "Nu există un singur „cel mai bun\" — alegerea corectă depinde de tipul tău de piele, de zona tratată și de buget. Caută un salon cu triplu laser, test gratuit și prețuri transparente. În Sectorul 2, zona Piața Iancului, Raffaella Beauty Studio bifează toate criteriile, cu consultație și ședință de testare gratuite la prima vizită.",
+      },
+      {
+        question: "Ce aparat de epilare definitivă este cel mai bun în 2026?",
+        answer:
+          "Aparatele cu triplă lungime de undă — Diodă 810 nm, Alexandrite 755 nm și Nd:YAG 1064 nm în același impuls — sunt considerate standardul în 2026: acoperă toate tipurile de piele și păr, cer mai puține ședințe decât IPL sau dioda simplă și, cu răcire activă, fac tratamentul aproape imperceptibil.",
+      },
+    ],
+  },
+  {
     slug: "epilarea-definitiva-doare",
     title: "Epilarea definitivă doare? Adevărul despre triplul laser",
     metaTitle: "Epilarea definitivă doare? Adevărul despre triplul laser",
