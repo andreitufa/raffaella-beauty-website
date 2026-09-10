@@ -26,6 +26,10 @@ După ORICE modificare la site, campania Google Ads, Google Business Profile sau
 
 ## Jurnal modificări (cea mai recentă sus)
 
+### 11 sep 2026 — Decizie user: NU folosim MERO
+- MERO respins definitiv: e cu abonament plătit; salonul folosește deja Notino, care e gratuit. **Nu mai propune MERO.**
+- Nuanță notată: profilul Notino acoperă gratuit partea de programări, dar ca sursă de vizibilitate AI e slab — pagina e protejată de Cloudflare anti-bot și nu apare în căutările pe numele salonului. Consecință: pentru vizibilitate AI, canalul terț principal rămâne **recenziile de pe Google Business Profile** (gratuit) + eventuale directoare gratuite/advertoriale.
+
 ### 10 sep 2026 (seara) — Implementare AI SEO pe site (cu acordul explicit al userului)
 - Commit `83856c2`, push → deploy Vercel. Campania Google Ads NEATINSĂ (înghețul rămâne).
 - **Articol nou pe blog** (formatul #1 citat de AI): slug `cum-alegi-salonul-de-epilare-definitiva-bucuresti` — „Cum alegi salonul de epilare definitivă în București: ghid complet". 5 criterii, tabel comparativ tehnologii (IPL/Diodă/Alexandrite/Nd:YAG/triplu laser), red flags în recenzii, checklist întrebări, secțiune onestă „există cel mai bun salon?" + poziționare Raffaella (Piața Iancului, Infinity triplu laser, test gratuit, Full Body 450 RON, rating 5.0). 3 FAQ-uri cu răspunsuri self-contained. Inserat PRIMUL în `pages/blog/blogData.ts` (blogul listează în ordinea arrayului). Prerendered: 7.051 caractere text static — cea mai bogată pagină din site.
